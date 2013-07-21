@@ -16,6 +16,10 @@ class TitleScreen:
         self.img_background_rect.centerx = self.screen.get_rect().centerx
         self.img_background_rect.centery = self.screen.get_rect().centery
 
+    def draw_background(self):
+        self.screen.fill((0, 0, 0))
+        self.screen.blit(self.img_background,self.img_background_rect)		
+		
     def main(self):
         self.choice = 0
         start_game = False
@@ -35,6 +39,8 @@ class TitleScreen:
 
         buttons = pygame.sprite.Group()
         buttons.add([button_play,button_help,button_exit])
+
+        self.draw_background() 
 
         last_choice = -1
 

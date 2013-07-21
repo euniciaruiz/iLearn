@@ -1,4 +1,3 @@
-
 import pygame, sys
 from title_screen import TitleScreen
 from game import Game

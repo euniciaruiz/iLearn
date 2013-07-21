@@ -18,6 +18,10 @@ class Game:
         self.img_background_rect.centerx = self.screen.get_rect().centerx
         self.img_background_rect.centery = self.screen.get_rect().centery
 
+    def draw_background(self):
+        self.screen.fill((0, 0, 0))
+        self.screen.blit(self.img_background,self.img_background_rect)
+		
     def main(self):
         self.choice = 0
         start_game = False
@@ -46,6 +50,8 @@ class Game:
         buttons = pygame.sprite.Group()
         buttons.add([button_astronomy,button_mathematics,button_generalScience,button_history,button_backToMainMenu])
 
+        self.draw_background() 
+		
         last_choice = -1
         subject = ""
 
