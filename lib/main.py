@@ -1,5 +1,7 @@
+
 import pygame, sys
 from title_screen import TitleScreen
+from game import Game
 
 class Main:
     def __init__(self):
@@ -13,11 +15,18 @@ class Main:
     def main(self):
         while True:
             if not self.title_screen(): break
+            self.play_game()
 
     def title_screen(self):
         ts = TitleScreen(self.screen, self.unit)
         ts.main()
         return ts.running
+
+    def play_game(self):
+        gm = Game(self.screen, self.unit)
+        gm.main()
+        return gm.running
+
 
 def main():
     game = Main()
