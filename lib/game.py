@@ -49,6 +49,8 @@ class Game:
 
         buttons = pygame.sprite.Group()
         buttons.add([button_astronomy,button_mathematics,button_generalScience,button_history,button_backToMainMenu])
+		
+		assert len(buttons) == 5, 'There should be five subject buttons to choose from.'
 
         self.draw_background() 
 		

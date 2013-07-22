@@ -39,6 +39,8 @@ class TitleScreen:
 
         buttons = pygame.sprite.Group()
         buttons.add([button_play,button_help,button_exit])
+		
+		assert len(buttons) == 3, 'There should be three Main Menu or Title Screen buttons'
 
         self.draw_background() 
 
