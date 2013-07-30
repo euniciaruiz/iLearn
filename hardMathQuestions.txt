@@ -1,0 +1,28 @@
+Farmer John had a square garden. If the sides of his garden were 5m long, what was the area of his garden.
+a. 20 sq.m.	b. 625 sq.m	c. 25sq.m	d. 15sq.m
+*answer is c. 25sq.m.
+
+Lucy had a rectangular toy box. One side was 3ft in width and the other was 2ft in length. What was the perimeter of the toy box?
+a. 10ft	b. 8ft	c. 6ft	d. 12ft
+*answer is a. 10ft.
+
+Andrew withdrew $2700 from an ATM which only
+gives out $100 bills and $500 bills. How many $100 bills does Andrew get from the ATM?
+a. 3 $100 bills
+b. 5 $100 bills
+c. 2 $100 bills
+d. 4 $100 bills
+*answer is c. 2$100 bills
+
+Tommy's mom brought home a layer of pizza cut into 8 triangular pieces. Tommy's sister ate 2 slices, his dad ate 3 1/2 slices and his mom ate a slice. How many slices were left for Tommy?
+a. 2 slices
+b. 2 1/2 slices
+c. 1 1/2 slices
+d. 1 slice
+
+Given the equation, x + 1 = 3/2: what is the value of x?
+a. 1/2
+b. 3
+c. 2
+d. 3/4
+*answer is a. 1/2.

@@ -1,0 +1,22 @@
+John had 15 books. Gus borrowed 4 of them, how many books does John have on hand?
+a. 12	b. 11	c.10	d. 14
+*answer is b. 11
+
+In a garden, there were 4 roses each with 4 leaves. How many leaves were there present?
+a. 4	b. 16	c. 20	d. 15
+*answer is b. 16
+
+Marnie received a gift enclosed in a box with six sides. What is the box called?
+a. triangle
+b. heptagon
+c. hexagon
+d. pentagon
+*answer is c. hexagon.
+
+A runner runs at a speed of 5km/hour. He needs to run 10km to finish the race. How many hours does it take him to finish the race if he runs at a constant speed?
+a. 5	b. 4	c. 2	d. 10
+*answer is c. 2.
+
+Emily, Mary, John and Bryle were in the same group of friends. Emily had $4, Mary had $3 and John had $5. If their group had $15 in total, how much does Bryle have?
+a. $3	b. $4	c. $2	d. none
+*answer is a. $3
