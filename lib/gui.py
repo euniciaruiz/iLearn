@@ -98,6 +98,8 @@ class Label(GuiObject):
         self.invalidate()
         self.render() #size updated
 
+        assert (font)== "abel.ttf"
+
     def set_position(self,rect):
         self.rect = rect
         self.invalidate()
