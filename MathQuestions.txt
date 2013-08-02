@@ -1,0 +1,79 @@
+John had 15 books. Gus borrowed 4 of them, how many books does John have on hand?
+a. 12	b. 11	c.10	d. 14
+*answer is b. 11
+
+In a garden, there were 4 roses each with 4 leaves. How many leaves were there present?
+a. 4	b. 16	c. 20	d. 15
+*answer is b. 16
+
+Marnie received a gift enclosed in a box with six sides. What is the box called?
+a. triangle
+b. heptagon
+c. hexagon
+d. pentagon
+*answer is c. hexagon.
+
+A runner runs at a speed of 5km/hour. He needs to run 10km to finish the race. How many hours does it take him to finish the race if he runs at a constant speed?
+a. 5	b. 4	c. 2	d. 10
+*answer is c. 2.
+
+Emily, Mary, John and Bryle were in the same group of friends. Emily had $4, Mary had $3 and John had $5. If their group had $15 in total, how much does Bryle have?
+a. $3	b. $4	c. $2	d. none
+*answer is a. $3
+
+The bakery will use 20sacks of flour preparing for a party. They have 8sacks in stock. The flour comes in containers of 4 sacks each. How many containers must the bakery order?
+a. 3	b. 4	c. 12	d. 8
+*answer is a. 3.
+
+
+Willie bought 4 flowers for his mom. Each flower costs $7.00. How much change did he get back from his $20 bill?
+a. 6	b. 7	c. 8	d. 10
+*answer is a. 6.
+
+Alex had twenty-five quarters. How much does he have in dollars, if a dollar is made up of 4 quarters?
+a. 6 dollars and 2 quarters	b. 6 dollars	c. 5 dollars and 3 quarters d. 6 dollars and 1 quarter	
+*answer is d. 6 dollars and 1 quarter.
+
+Nick had 8 toy  trucks. His friend Nathan brought over 3 ttoy trucks. Given that the toy truck has 4 wheels each, how many wheels are there all in all?
+a. 22	b. 40	c. 42	d. 44
+*answer is d. 44
+
+Dan is preparing for a concert. He wants to figure out how many people will be there. there are 200 rows of seats and in each row, there are 10 seats in it. How many seats are there in the concert hall?
+a. 2000	b. 10000	c. 20000	d. 200
+*answer is a. 2000.
+
+Three friends go out to dinner. After eating, they get a bill worth $27. They plan to split the bill among them. How much does each one pay?
+a. $8.50	b. $9.00	c. $9.25	d. $7.27
+*answer is b. $9.00
+
+Farmer John had a square garden. If the sides of his garden were 5m long, what was the area of his garden.
+a. 20 sq.m.	b. 625 sq.m	c. 25sq.m	d. 15sq.m
+*answer is c. 25sq.m.
+
+Lucy had a rectangular toy box. One side was 3ft in width and the other was 2ft in length. What was the perimeter of the toy box?
+a. 10ft	b. 8ft	c. 6ft	d. 12ft
+*answer is a. 10ft.
+
+Andrew withdrew $2700 from an ATM which only
+gives out $100 bills and $500 bills. How many $100 bills does Andrew get from the ATM?
+a. 3 $100 bills
+b. 5 $100 bills
+c. 2 $100 bills
+d. 4 $100 bills
+*answer is c. 2$100 bills
+
+Tommy's mom brought home a layer of pizza cut into 8 triangular pieces. Tommy's sister ate 2 slices, his dad ate 3 1/2 slices and his mom ate a slice. How many slices were left for Tommy?
+a. 2 slices
+b. 2 1/2 slices
+c. 1 1/2 slices
+d. 1 slice
+
+Given the equation, x + 1 = 3/2: what is the value of x?
+a. 1/2
+b. 3
+c. 2
+d. 3/4
+*answer is a. 1/2.
+
+
+END

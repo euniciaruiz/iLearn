@@ -2,7 +2,6 @@ import pygame
 import data
 from gui import MenuButton
 
-
 class Game:
     def __init__(self, screen, unit):
         self.screen = screen
@@ -21,7 +20,10 @@ class Game:
     def draw_background(self):
         self.screen.fill((0, 0, 0))
         self.screen.blit(self.img_background,self.img_background_rect)
-		
+
+    def getQuestions():
+        info =
+
     def main(self):
         self.choice = 0
         start_game = False
@@ -49,11 +51,11 @@ class Game:
 
         buttons = pygame.sprite.Group()
         buttons.add([button_astronomy,button_mathematics,button_generalScience,button_history,button_backToMainMenu])
-		
-		assert len(buttons) == 5, 'There should be five subject buttons to choose from.'
 
-        self.draw_background() 
-		
+	#	assert len(buttons) == 5, 'There should be five subject buttons to choose from.'
+
+        self.draw_background()
+
         last_choice = -1
         subject = ""
 
