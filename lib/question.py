@@ -5,6 +5,26 @@ import subject, data
 
 class Question(object):
 
+	def set_question(self, question, choices, answer):
+		self.question = question
+        self.choices = choices
+        self.answer = answer
+		
+		x = 0
+        line = ""
+        lines = []
+        while x <= len(self.question):
+            letter = self.question[x]
+            if letter == "\n"or x == len(self.question)-1:
+                image = self.game.font.render(line, True, [255,255,255])
+                line = ""
+                lines.append(image)
+                if x == len(self.question)-1:
+                    break
+            else:
+                line = line + letter
+            x += 1;
+
     def update(self):
         if self.questions == []:
             ERROR("Out of questions!")
