@@ -4,6 +4,7 @@ import time, random, string, os
 import subject, data
 
 class Question(object):
+
 def __init__(self, game):
         self.game = game
         self.game.change_bg_color([0,64,0])
