@@ -3,7 +3,7 @@
 class SubjectController extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('subject/list');
+		$this->load->view('game/subjectList');
 	}
 
 	public function mathematics()
