@@ -5,6 +5,12 @@ class SubjectController extends CI_Controller {
 	{
 		$this->load->view('game/subjectList');
 	}
+	
+	public function general_knowledge()
+	{
+		$generalKnowledge_txt = fopen('questions/general_knowledge.txt', 'r');
+		fclose($generalKnowledge_txt);
+	}
 
 	public function mathematics()
 	{
@@ -14,7 +20,7 @@ class SubjectController extends CI_Controller {
 		$counter = 0;
 		$counterTemp = 0;
 		$choice_counter = 0;
-
+		$mathematics_txt = fopen('questions/mathematics.txt', 'r');
 		while ($line = fgets($mathematics_txt)) {
 			if ($counter == 0) {
 				$question = $line;
@@ -46,13 +52,22 @@ class SubjectController extends CI_Controller {
 				$choices = array();
 				$counterTemp = $counterTemp + 1;
 			}
-			
 		}
-		
+		fclose($science_txt);
 		  
 		$data['mathematics'] = $mathematics;
 		$this->load->view('game/mathematics', $data);
 	}
 	
-	
+	public function science()
+	{
+		$science_txt = fopen('questions/science.txt', 'r');
+		fclose($science_txt);
+	}
+
+	public function english()
+	{
+		$english_txt = fopen('questions/english.txt', 'r');
+		fclose($english_txt);
+	}
 }
