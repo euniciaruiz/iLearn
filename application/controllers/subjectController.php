@@ -8,8 +8,8 @@ class SubjectController extends CI_Controller {
 	
 	public function general_knowledge()
 	{
-		$generalKnowledge_txt = fopen('questions/general_knowledge.txt', 'r');
-		fclose($generalKnowledge_txt);
+		$generalKnowledge_txtfile = fopen('questions/general_knowledge.txt', 'r');
+		fclose($generalKnowledge_txtfile);
 	}
 
 	public function mathematics()
@@ -20,8 +20,8 @@ class SubjectController extends CI_Controller {
 		$counter = 0;
 		$counterTemp = 0;
 		$choice_counter = 0;
-		$mathematics_txt = fopen('questions/mathematics.txt', 'r');
-		while ($line = fgets($mathematics_txt)) {
+		$mathematics_txtfile = fopen('questions/mathematics.txt', 'r');
+		while ($line = fgets($mathematics_txtfile)) {
 			if ($counter == 0) {
 				$question = $line;
 				$counter = $counter + 1;
@@ -53,7 +53,7 @@ class SubjectController extends CI_Controller {
 				$counterTemp = $counterTemp + 1;
 			}
 		}
-		fclose($science_txt);
+		fclose($science_txtfile);
 		  
 		$data['mathematics'] = $mathematics;
 		$this->load->view('game/mathematics', $data);
@@ -61,13 +61,13 @@ class SubjectController extends CI_Controller {
 	
 	public function science()
 	{
-		$science_txt = fopen('questions/science.txt', 'r');
-		fclose($science_txt);
+		$science_txtfile = fopen('questions/science.txt', 'r');
+		fclose($science_txtfile);
 	}
 
 	public function english()
 	{
-		$english_txt = fopen('questions/english.txt', 'r');
-		fclose($english_txt);
+		$english_txtfile = fopen('questions/english.txt', 'r');
+		fclose($english_txtfile);
 	}
 }
