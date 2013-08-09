@@ -95,8 +95,7 @@ class SubjectController extends CI_Controller {
 				$counterTemp = $counterTemp + 1;
 			}
 		}
-		fclose($science_txtfile);
-		  
+		fclose($mathematics_txtfile);  
 		$data['mathematics'] = $mathematics;
 		$this->load->view('game/mathematics', $data);
 	}

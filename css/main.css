@@ -1,0 +1,104 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 980px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 1000px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 980px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .image {
+   width: 320px;
+   height: 265px;
+   position: absolute;
+   top: 0px;
+   left: 660px;
+ }
+ #absolute-wrapper .icon.icon-home {
+   font-size: 39px;
+   height: 44px;
+   width: 39px;
+   position: absolute;
+   top: 45px;
+   left: 155px;
+ }
+ #absolute-wrapper .hero-unit {
+   position: absolute;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-1 {
+   background: #3b0f68;
+   width: 634px;
+   height: 357px;
+   top: 88px;
+   left: 121px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-2 {
+   background: #ffffff;
+   width: 528px;
+   height: 106px;
+   top: 157px;
+   left: 175px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-2 p {
+   font-family:"limelight";
+   font-size: 20px;
+   color: #000000;
+ }
+ #absolute-wrapper .btn {
+   background: #3ccbf7;
+   font-size: 17px;
+   font-family:"limelight";
+   width: 209px;
+   height: 51px;
+   position: absolute;
+ }
+ #absolute-wrapper .btn.btn-1 {
+   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+ }
+ #absolute-wrapper .btn.btn-2 {
+   left: 525px;
+ }
+ #absolute-wrapper .btn.btn-3 {
+   top: 483px;
+ }
+ #absolute-wrapper .btn.btn-4 {
+   top: 412px;
+ }
+ #absolute-wrapper .btn.btn-5 {
+   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.988235);
+   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.988235);
+   -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.988235);
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.988235);
+   top: 413px;
+   left: 253px;
+ }
+ #absolute-wrapper .btn-2.btn-3 {
+   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+ }
+ #absolute-wrapper .btn-1.btn-3 {
+   left: 254px;
+ }
