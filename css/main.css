@@ -32,6 +32,25 @@
    top: 0px;
    left: 660px;
  }
+ 
+  #absolute-wrapper .imageSci {
+   position: absolute;
+ }
+ 
+ #absolute-wrapper .imageSci.image-1 {
+   width: 396px;
+   height: 184px;
+   top: -19px;
+   left: 544px;
+ }
+ 
+  #absolute-wrapper .imageSci.image-2 {
+   width: 350px;
+   height: 262px;
+   top: 506px;
+   left: 1px;
+ }
+ 
  #absolute-wrapper .icon.icon-home {
    font-size: 39px;
    height: 44px;
