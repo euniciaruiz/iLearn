@@ -23,14 +23,15 @@
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
+		<?php $rand = array_rand($mathematics); ?>
         <div class="hero-unit hero-unit-2">
-          <p><?php echo $mathematics[0][0]; ?></p>
+          <p><?php echo $mathematics[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <button class="btn btn-1 btn-2 btn-4"><?php echo $mathematics[0][1][0]; ?></button>
-        <button class="btn btn-5"><?php echo $mathematics[0][1][1]; ?></button>
-        <button class="btn btn-2 btn-3"><?php echo $mathematics[0][1][2]; ?></button>
-        <button class="btn btn-1 btn-3"><?php echo $mathematics[0][1][3]; ?></button>
+        <button class="btn btn-1 btn-2 btn-4"><?php echo $mathematics[$rand][1][0]; ?></button>
+        <button class="btn btn-5"><?php echo $mathematics[$rand][1][1]; ?></button>
+        <button class="btn btn-2 btn-3"><?php echo $mathematics[$rand][1][2]; ?></button>
+        <button class="btn btn-1 btn-3"><?php echo $mathematics[$rand][1][3]; ?></button>
       </div>
     </div>
   </body>

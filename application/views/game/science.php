@@ -20,18 +20,18 @@
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
+		<?php $rand = array_rand($science); ?>
         <div class="hero-unit hero-unit-2">
-          <p>Lorem Ipsum...</p>
+          <p><?php echo $science[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
         <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="imageSci image-1">
 <i class="icon icon-home"></i>
 
-        <button class="btn btn-1 btn-2 btn-4">Button</button>
-        <button class="btn btn-5">Button</button>
-        <button class="btn btn-2 btn-3">Button</button>
-        <img src="<?php echo base_url();?>images/icontelescope.jpg" class="imageSci image-2">
-        <button class="btn btn-1 btn-3">Button</button>
+        <button class="btn btn-1 btn-2 btn-4"><?php echo $science[$rand][1][0]; ?></button>
+        <button class="btn btn-5"><?php echo $science[$rand][1][1]; ?></button>
+        <button class="btn btn-2 btn-3"><?php echo $science[$rand][1][2]; ?></button>
+        <button class="btn btn-1 btn-3"><?php echo $science[$rand][1][3]; ?></button>
       </div>
     </div>
   </body>
