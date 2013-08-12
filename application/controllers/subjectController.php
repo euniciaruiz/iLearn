@@ -1,7 +1,7 @@
 <?php
 
 class SubjectController extends CI_Controller {
-	public function index()
+	public function play()
 	{
 		$this->load->view('game/subjectList');
 	}

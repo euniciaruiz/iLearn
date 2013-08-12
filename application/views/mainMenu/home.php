@@ -7,9 +7,9 @@
 	
 	<body>
 		
-		<a href="subjectController/play">PLAY</a><br>
-		<a href="mainmenuController/help">HELP</a><br>
-		<a href="mainmenuController/exitGame">EXIT</a>
+		<?php echo anchor('subjectController/play', 'Play');?><br>
+		<?php echo anchor('subjectController/help', 'Help');?><br>
+		<?php echo anchor('subjectController/exit', 'Quit');?><br>
 		
 		
 	</body>

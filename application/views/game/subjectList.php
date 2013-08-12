@@ -5,10 +5,9 @@
 	<title>SUBJECTS</title>
 </head>
 <body>
-	<a href="">ENGLISH</a><br>
-	<a href="">MATH</a><br>
-	<a href="">SCIENCE</a><br>
-	<a href="">GENERAL KNOWLEDGE</a>
-	
+	<?php echo anchor('subjectController/english', 'ENGLISH');?><br>
+	<?php echo anchor('subjectController/mathematics', 'MATHEMATICS');?><br>
+	<?php echo anchor('subjectController/science', 'SCIENCE');?><br>
+	<?php echo anchor('subjectController/general_knowledge', 'GENERAL KNOWLEDGE');?><br>	
 </body>
 </html>
