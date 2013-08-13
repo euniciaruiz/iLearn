@@ -12,10 +12,13 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/project.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
 	<title>Interactive Learning Game</title>
-</head>
+</head> 
 <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
+        <img src="<?php echo base_url();?>images/icontelescope.jpg" class="image image-2">
+		<i class="icon icon-home"></i>
+
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
@@ -25,13 +28,11 @@
           <p><?php echo $science[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="imageSci image-1">
-<i class="icon icon-home"></i>
-
-        <button class="btn btn-1 btn-2 btn-4"><?php echo $science[$rand][1][0]; ?></button>
-        <button class="btn btn-5"><?php echo $science[$rand][1][1]; ?></button>
-        <button class="btn btn-2 btn-3"><?php echo $science[$rand][1][2]; ?></button>
-        <button class="btn btn-1 btn-3"><?php echo $science[$rand][1][3]; ?></button>
+        <button class="btn btn-1 btn-2"><?php echo $science[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-3"><?php echo $science[$rand][1][1]; ?></button>
+        <button class="btn btn-3 btn-4"><?php echo $science[$rand][1][2]; ?></button>
+        <button class="btn btn-2 btn-4"><?php echo $science[$rand][1][3]; ?></button>
+        <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="image image-3">
       </div>
     </div>
   </body>
