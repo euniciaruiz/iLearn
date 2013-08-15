@@ -8,7 +8,13 @@ class SubjectController extends CI_Controller {
 	
 	public function general_knowledge()
 	{
-		$gen_knowledge = array();
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = array($this->question->getSubjectQuestionList($subject_id));
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+
+		/*$gen_knowledge = array();
 		$question = "";
 		$choices = array();
 		$counter = 0;
@@ -51,12 +57,18 @@ class SubjectController extends CI_Controller {
 		fclose($generalKnowledge_txtfile);
 		
 		$data['gen_knowledge'] = $gen_knowledge;
-		$this->load->view('game/gen_knowledge', $data);
+		$this->load->view('game/gen_knowledge', $data);*/
 	}
 
 	public function mathematics()
 	{
-		$mathematics = array();
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = array($this->question->getSubjectQuestionList($subject_id));
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+
+		/*$mathematics = array();
 		$question = "";
 		$choices = array();
 		$counter = 0;
@@ -97,18 +109,30 @@ class SubjectController extends CI_Controller {
 		}
 		fclose($mathematics_txtfile);  
 		$data['mathematics'] = $mathematics;
-		$this->load->view('game/mathematics', $data);
+		$this->load->view('game/mathematics', $data);*/
 	}
 	
 	public function science()
 	{
-		$science_txtfile = fopen('questions/science.txt', 'r');
-		fclose($science_txtfile);
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = array($this->question->getSubjectQuestionList($subject_id));
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+
+		//$science_txtfile = fopen('questions/science.txt', 'r');
+		//fclose($science_txtfile);
 	}
 
 	public function english()
 	{
-		$english_txtfile = fopen('questions/english.txt', 'r');
-		fclose($english_txtfile);
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = array($this->question->getSubjectQuestionList($subject_id));
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+		
+		//$english_txtfile = fopen('questions/english.txt', 'r');
+		//fclose($english_txtfile);
 	}
 }
