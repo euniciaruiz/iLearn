@@ -2,7 +2,13 @@
 
 class Choice extends CI_Model {
 	function getChoiceList() {
-		$result = $this->db->get('choice');
-		return $result;
+		$query = $this->db->get('choice');
+		
+		$data = array();
+		foreach($query->result() as $row)
+		{
+		  $data[] = $row;
+		}
+		return $data;
 	}
 }
