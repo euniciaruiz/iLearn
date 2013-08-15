@@ -16,7 +16,7 @@
 <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <img src="<?php echo base_url();?>images/icontelescope.jpg" class="image image-2">
+        <img src="<?php echo base_url();?>images/icontelescope.jpg" class="image image-3">
 		<i class="icon icon-home"></i>
 
         <div class="hero-unit hero-unit-1">
@@ -32,7 +32,7 @@
         <button class="btn btn-1 btn-3"><?php echo $science[$rand][1][1]; ?></button>
         <button class="btn btn-3 btn-4"><?php echo $science[$rand][1][2]; ?></button>
         <button class="btn btn-2 btn-4"><?php echo $science[$rand][1][3]; ?></button>
-        <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="image image-3">
+        <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="image image-4">
       </div>
     </div>
   </body>
