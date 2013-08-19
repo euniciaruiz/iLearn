@@ -10,50 +10,32 @@ class SubjectController extends CI_Controller {
 	
 	public function general_knowledge()
 	{
-		$gen_knowledge = array();
-		$question = "";
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = $this->question->getSubjectQuestionList($subject_id);
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+		
+		$general_knowledge = array();
 		$choices = array();
-		$counter = 0;
-		$counterTemp = 0;
-		$choice_counter = 0;
-		$generalKnowledge_txtfile = fopen('questions/general_knowledge.txt', 'r');
+		$question_counter = 0;
+		$this->load->helper('array');
 		
-		while ($line = fgets($generalKnowledge_txtfile)) {
-			if ($counter == 0) {
-				$question = $line;
-				$counter = $counter + 1;
-			} elseif ($counter == 1) {
-				$choices[$choice_counter] = $line;
-				$choice_counter = $choice_counter + 1;
-				$counter = $counter + 1;
-			} elseif ($counter == 2) {
-				$choices[$choice_counter] = $line;
-				$choice_counter = $choice_counter + 1;
-				$counter = $counter + 1;
-			} elseif ($counter == 3) {
-				$choices[$choice_counter] = $line;
-				$choice_counter = $choice_counter + 1;
-				$counter = $counter + 1;
-			} elseif ($counter == 4) {
-				$choices[$choice_counter] = $line;
-				$choice_counter = $choice_counter + 1;
-				$counter = $counter + 1;
-			} else {
-				$answer = $line;
-				$mathematics[$counterTemp] = array($question, $choices, $answer);
-				$counter = $counter + 1;
+		for ($i=0; $i < count($question); $i++) {
+			$choice_counter = 0;
+			for ($j=0; $j < count($choice); $j++) {
+				if ($choice[$j][2] == $question[$i][0]) {
+					$choices[$choice_counter] = $choice[$j][1];
+					$choice_counter++;
+				}
 			}
-			if($counter == 6) {
-				$counter = 0;
-				$choice_counter = 0;
-				$choices = array();
-				$counterTemp = $counterTemp + 1;
-			}
+			$general_knowledge[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
+			$question_counter++;
 		}
-		fclose($generalKnowledge_txtfile);
 		
-		$data['gen_knowledge'] = $gen_knowledge;
-		$this->load->view('game/gen_knowledge', $data);
+		
+		$data['general_knowledge'] = $general_knowledge;
+		$this->load->view('game/general_knowledge', $data);
 	}
 
 	public function mathematics()
