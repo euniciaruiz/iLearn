@@ -68,8 +68,31 @@ class SubjectController extends CI_Controller {
 	
 	public function science()
 	{
-		$science_txtfile = fopen('questions/science.txt', 'r');
-		fclose($science_txtfile);
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = $this->question->getSubjectQuestionList($subject_id);
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+		
+		$science = array();
+		$choices = array();
+		$question_counter = 0;
+		$this->load->helper('array');
+		
+		for ($i=0; $i < count($question); $i++) {
+			$choice_counter = 0;
+			for ($j=0; $j < count($choice); $j++) {
+				if ($choice[$j][2] == $question[$i][0]) {
+					$choices[$choice_counter] = $choice[$j][1];
+					$choice_counter++;
+				}
+			}
+			$science[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
+			$question_counter++;
+		}
+		
+		$data['science'] = $science;
+		$this->load->view('game/science', $data);
 	}
 
 	public function english()
