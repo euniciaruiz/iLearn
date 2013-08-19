@@ -2,13 +2,13 @@
 
 class Question extends CI_Model {
 	function getSubjectQuestionList($subject_id) {
-		$this->db->where('subject_id', $subject_id);
-		$query = $this->db->get('question');
-
+		$query = "select * from question where subject_id = '$subject_id'";
+		$result = pg_query($query);
 		$data = array();
-		foreach($query->result() as $row)
-		{
-		  $data[] = $row;
+		$counter = 0;
+		while ($row = pg_fetch_array($result)) {
+			$data[$counter] = $row;
+			$counter++;
 		}
 		return $data;
 	}

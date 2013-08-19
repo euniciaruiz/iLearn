@@ -2,12 +2,13 @@
 
 class Choice extends CI_Model {
 	function getChoiceList() {
-		$query = $this->db->get('choice');
-		
+		$query = "select * from choice";
+		$result = pg_query($query);
 		$data = array();
-		foreach($query->result() as $row)
-		{
-		  $data[] = $row;
+		$counter = 0;
+		while ($row = pg_fetch_array($result)) {
+			$data[$counter] = $row;
+			$counter++;
 		}
 		return $data;
 	}
