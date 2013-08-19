@@ -60,23 +60,28 @@ class SubjectController extends CI_Controller {
 	{
 		$subject_id = $this->input->post('id');
 		$this->load->model('question');
-		$question = array($this->question->getSubjectQuestionList($subject_id));
+		$question = $this->question->getSubjectQuestionList($subject_id);
 		$this->load->model('choice');
 		$choice = $this->choice->getChoiceList();
 	
 		$mathematics = array();
 		$choices = array();
 		$question_counter = 0;
+		$this->load->helper('array');
 		
-		/*for ($i=0; $i < count($question); $i++) {
-			echo $i;
-			//echo element('id', $question);
-			
-		}*/
-		
-			 
-		//$data['mathematics'] = $mathematics;
-		//$this->load->view('game/mathematics', $data);
+		for ($i=0; $i < count($question); $i++) {
+			$choice_counter = 0;
+			for ($j=0; $j < count($choice); $j++) {
+				if ($choice[$j][2] == $question[$i][0]) {
+					$choices[$choice_counter] = $choice[$j][1];
+					$choice_counter++;
+				}
+			}
+			$mathematics[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
+			$question_counter++;
+		}
+		$data['mathematics'] = $mathematics;
+		$this->load->view('game/mathematics', $data);
 	}
 	
 	public function science()
