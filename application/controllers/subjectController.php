@@ -97,7 +97,30 @@ class SubjectController extends CI_Controller {
 
 	public function english()
 	{
-		$english_txtfile = fopen('questions/english.txt', 'r');
-		fclose($english_txtfile);
+		$subject_id = $this->input->post('id');
+		$this->load->model('question');
+		$question = $this->question->getSubjectQuestionList($subject_id);
+		$this->load->model('choice');
+		$choice = $this->choice->getChoiceList();
+		
+		$english = array();
+		$choices = array();
+		$question_counter = 0;
+		$this->load->helper('array');
+		
+		for ($i=0; $i < count($question); $i++) {
+			$choice_counter = 0;
+			for ($j=0; $j < count($choice); $j++) {
+				if ($choice[$j][2] == $question[$i][0]) {
+					$choices[$choice_counter] = $choice[$j][1];
+					$choice_counter++;
+				}
+			}
+			$english[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
+			$question_counter++;
+		}
+		
+		$data['english'] = $english;
+		$this->load->view('game/english', $data);
 	}
 }
