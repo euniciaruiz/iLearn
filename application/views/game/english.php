@@ -35,6 +35,40 @@
         <button class="btn btn-3 btn-4"><?php echo $english[$rand][1][3]; ?></button>
       </div>
     </div>
+	<div id="dialog-form-correct-answer" title="Correct">
+  		<p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Congratulations! You got the correct answer</p>
+  		<input type="hidden" id="choice_id" value="" />
+	</div>
   </body>
 
 </html>
+
+<script type="text/javascript">
+$( "#dialog-form-correct-answer" ).dialog({
+	  autoOpen: false,
+      resizable: false,
+      height:200,
+      modal: true,
+      buttons: {
+        "Correct answer": function() {
+        	$.ajax({
+			  url: "{{URL::base()}}/subjectController/english",
+			  type: "POST",
+			  data: {cat_id: $('#choice_id').val()},
+			 success:function(data)
+			  {
+			  $( "#dialog-form-correct-answer" ).dialog( "close" );  
+			  $(".success_msg").css('display','block');			  
+			  },
+			  error:function(data)
+			  {
+			   $(".error_msg").css('display','block');
+			  }
+			});
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+     }
+});
+</script>
