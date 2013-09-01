@@ -44,31 +44,16 @@
 </html>
 
 <script type="text/javascript">
+$('#category_tbody').on('click','.btns',function(){   
+      	var id = $(this).data('id');
+      	$('#delete_id').val(id);
+      	$( "#dialog-form-correct-answer" ).dialog( "open" );
+      });
+	  
 $( "#dialog-form-correct-answer" ).dialog({
 	  autoOpen: false,
       resizable: false,
       height:200,
       modal: true,
-      buttons: {
-        "Correct answer": function() {
-        	$.ajax({
-			  url: "{{URL::base()}}/subjectController/english",
-			  type: "POST",
-			  data: {cat_id: $('#choice_id').val()},
-			 success:function(data)
-			  {
-			  $( "#dialog-form-correct-answer" ).dialog( "close" );  
-			  $(".success_msg").css('display','block');			  
-			  },
-			  error:function(data)
-			  {
-			   $(".error_msg").css('display','block');
-			  }
-			});
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-     }
 });
 </script>
