@@ -12,4 +12,10 @@ class Question extends CI_Model {
 		}
 		return $data;
 	}
+	
+	function getCorrectAnswer($question_id){
+		$query = "select answer from question where id='$question_id'";
+		$answer = pg_query($query);
+		return $answer;
+	}
 }

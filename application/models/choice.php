@@ -12,8 +12,8 @@ class Choice extends CI_Model {
 		}
 		return $data;
 	}
-	function getChoiceLabel(choiceId) {
-		$query = "select choice_description from choice where id='choiceId'";
+	function getChoiceLabel($choiceId) {
+		$query = "select choice_description from choice where id='$choiceId'";
 		$label = pg_query($query);
 		return $label;
 	}
