@@ -28,12 +28,18 @@
           <p><?php echo $mathematics[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <button class="btn btn-1 btn-2"><?php echo $mathematics[$rand][1][0]; ?></button>
-        <button class="btn btn-1 btn-3"><?php echo $mathematics[$rand][1][1]; ?></button>
-        <button class="btn btn-3 btn-4"><?php echo $mathematics[$rand][1][2]; ?></button>
-        <button class="btn btn-2 btn-4"><?php echo $mathematics[$rand][1][3]; ?></button>
+        <button class="btn btn-1 btn-2" onclick="myFunction()"><?php echo $mathematics[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-3" onclick="myFunction()"><?php echo $mathematics[$rand][1][1]; ?></button>
+        <button class="btn btn-3 btn-4" onclick="myFunction()"><?php echo $mathematics[$rand][1][2]; ?></button>
+        <button class="btn btn-2 btn-4" onclick="myFunction()"><?php echo $mathematics[$rand][1][3]; ?></button>
       </div>
     </div>
   </body>
 
 </html>
+<script>
+function myFunction()
+{
+alert("You got the correct answer!");
+}
+</script>
