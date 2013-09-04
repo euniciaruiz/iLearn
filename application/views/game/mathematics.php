@@ -29,7 +29,7 @@
           <p><?php echo $mathematics[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <button class="btn btn-1 btn-2"><a><?php echo $mathematics[$rand][1][0]; ?></a></button>
+        <button class="btn btn-1 btn-2" i><a><?php echo $mathematics[$rand][1][0]; ?></a></button>
         <button class="btn btn-1 btn-3"><a><?php echo $mathematics[$rand][1][1]; ?></a></button>
         <button class="btn btn-3 btn-4"><a><?php echo $mathematics[$rand][1][2]; ?></a></button>
         <button class="btn btn-2 btn-4"><a><?php echo $mathematics[$rand][1][3]; ?></a></button>
