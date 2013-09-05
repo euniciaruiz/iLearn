@@ -15,5 +15,11 @@ class MainmenuController extends CI_Controller {
 		//window.close();
 	}
 	
+	function display() {
+		$this->load->model('users');
+		$data['users'] = $this->users->getUser();
+		$this->load->view('mainMenu/user', $data);	
+	}
+	
 }
 ?>
