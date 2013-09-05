@@ -13,6 +13,16 @@ class MainmenuController extends CI_Controller {
 		$this->load->view('mainMenu/home', $data);
 	}
 	
+	function create()
+	{
+		$data = array(
+			'name' => $this->input->post('name')
+		);
+		
+		$this->player->addPlayer($data);
+		$this->index();
+	}
+	
 	function help()
 	{
 		$this->load->view('mainMenu/help');
@@ -21,7 +31,6 @@ class MainmenuController extends CI_Controller {
 	function exitGame()
 	{
 		echo 'close window';
-		//window.close();
 	}
 	
 }

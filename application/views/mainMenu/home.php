@@ -28,13 +28,16 @@
 			<div class="md-content">
 				<h3>Create User</h3>
 				<div>
+				<?php echo form_open('mainmenuController/create');?>
 					<ul>
 						<p>
 							<label for="content">Name:</label>
 							<input type="text" name="name" />
 						</p>
 					</ul>
-					<button class="md-close">Create!</button>
+					
+					<input type="submit" value="Create!" />
+				<?php echo form_close(); ?>
 				</div>
 			</div>
 		</div>
@@ -83,18 +86,6 @@
 				</div>
 			</div>
 		</div>
-	
-		<center>
-		
-		
-<<<<<<< HEAD
-		
-=======
-		<?php echo anchor('subjectController/play', '<font face="century gothic" color="#F58EA1" size="32">START</font>');?><br>
-		<?php echo anchor('subjectController/help', '<font face="century gothic" color="#98EDD4" size="32">Tutorial</font>');?><br>
-			
->>>>>>> dd17da06e320400c917ccbcc1e7d992b6ba6daf2
-		</center>
 		
 		<div class="md-overlay"></div>
 		<script src="<?php echo base_url();?>js/classie.js"></script>
