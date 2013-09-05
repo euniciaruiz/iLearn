@@ -1,16 +1,25 @@
 <?php
 
 class MainmenuController extends CI_Controller {
-	
-	public function index(){
-		$this->load->view('mainMenu/home');	
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('Player', 'player', TRUE);
 	}
 	
-	function help(){
+	public function index()
+	{	
+		$this->load->model('player');
+		$data['query'] = $this->player->getPlayerList();
+		$this->load->view('mainMenu/home', $data);
+	}
+	
+	function help()
+	{
 		$this->load->view('mainMenu/help');
 	}
 	
-	function exitGame(){
+	function exitGame()
+	{
 		echo 'close window';
 		//window.close();
 	}

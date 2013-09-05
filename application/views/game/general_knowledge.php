@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/fontawesome.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/project.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="<?php echo base_url();?>js/jquery.js"></script>
 	<title>Interactive Learning Game</title>
 </head>
 <body>
@@ -28,11 +29,29 @@
           <p><?php echo $general_knowledge[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <button class="btn btn-1 btn-2"><?php echo $general_knowledge[$rand][1][0]; ?></button>
-        <button class="btn btn-1 btn-3"><?php echo $general_knowledge[$rand][1][1]; ?></button>
-        <button class="btn btn-3 btn-4"><?php echo $general_knowledge[$rand][1][2]; ?></button>
-        <button class="btn btn-2 btn-4"><?php echo $general_knowledge[$rand][1][3]; ?></button>
+        <button class="btn btn-1 btn-2"><a><?php echo $general_knowledge[$rand][1][0]; ?></a></button>
+        <button class="btn btn-1 btn-3"><a><?php echo $general_knowledge[$rand][1][1]; ?></a></button>
+        <button class="btn btn-3 btn-4"><a><?php echo $general_knowledge[$rand][1][2]; ?></a></button>
+        <button class="btn btn-2 btn-4"><a><?php echo $general_knowledge[$rand][1][3]; ?></a></button>
         <img src="<?php echo base_url();?>images/images-4.jpg" class="image image-7">
+		<script>
+		if(true){
+		$( document ).ready(function() {
+			$( "a" ).click(function( event ) {
+				alert( "Your Answer is Correct!" );
+			});
+		});
+		}
+		else{
+		$( document ).ready(function() {
+			$( "a" ).click(function( event ) {
+				alert( "Your Answer is Incorrect!" );
+			});
+		});
+		}
+		
+	 
+		</script>
       </div>
     </div>
   </body>
