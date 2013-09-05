@@ -16,6 +16,7 @@ class SubjectController extends CI_Controller {
 		$subject_id = $this->input->post('id');
 		$this->load->model('question');
 		$question = $this->question->getSubjectQuestionList($subject_id);
+		$answer = $this->question->getCorrectAnswer($question_id);
 		$this->load->model('choice');
 		$choice = $this->choice->getChoiceList();
 		
@@ -129,25 +130,25 @@ class SubjectController extends CI_Controller {
 	
 	public function next_question() {
 		$data = array(
-				'subject_name' => $this->input->post('subject_name'),
-				'subject_array' => $this->input->post('subject')
+				'subject_name' => $this->input->post('$subject_name'),
+				'subject_array' => $this->input->post('$subject')
 		);
 
 		if($data['subject_name'] == "general_knowledge") {
-			$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
+			$data['general_knowledge'] = $data['subject_array'];
 			$this->load->view('game/general_knowledge', $data);
 		}
 		else if($data['subject_name'] == "mathematics") {
-			$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
-			$this->load->view('game/mathematics', $data);
+			$data['mathematics'] = $data['subject_array'];
+			$this->load->view('game/mathematics', $data['subject_array']);
 		}
 		else if($data['subject_name'] == "science") {
-			$data['science'] = unserialize(base64_decode($data['subject_array']));
-			$this->load->view('game/science', $data);
+			$data['science'] = $data['subject_array'];
+			$this->load->view('game/science', $data['subject']);
 		}
-		else if($data['subject_name'] == "english"){
-			$data['english'] = unserialize(base64_decode($data['subject_array']));
-			$this->load->view('game/english', $data);
+		else {
+			$data['english'] = $data['subject_array'];
+			$this->load->view('game/english', $data['subject']);
 		}
 	}
 }

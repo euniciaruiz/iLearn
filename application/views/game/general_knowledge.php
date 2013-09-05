@@ -29,12 +29,22 @@
           <p><?php echo $general_knowledge[$rand][0]; ?></p>
           <div class="btns"></div>
         </div>
-        <button class="btn btn-1 btn-2"><a><?php echo $general_knowledge[$rand][1][0]; ?></a></button>
-        <button class="btn btn-1 btn-3"><a><?php echo $general_knowledge[$rand][1][1]; ?></a></button>
-        <button class="btn btn-3 btn-4"><a><?php echo $general_knowledge[$rand][1][2]; ?></a></button>
-        <button class="btn btn-2 btn-4"><a><?php echo $general_knowledge[$rand][1][3]; ?></a></button>
+        <button class="btn btn-1 btn-2" name="choice"><a><?php echo $general_knowledge[$rand][1][0]; ?></a></button>
+        <button class="btn btn-1 btn-3" name="choice"><a><?php echo $general_knowledge[$rand][1][1]; ?></a></button>
+        <button class="btn btn-3 btn-4" name="choice"><a><?php echo $general_knowledge[$rand][1][2]; ?></a></button>
+        <button class="btn btn-2 btn-4" name="choice"><a><?php echo $general_knowledge[$rand][1][3]; ?></a></button>
         <img src="<?php echo base_url();?>images/images-4.jpg" class="image image-7">
 		<script>
+		
+		//---added code to determine if answer is correct or wrong---//
+		//<?php
+		//	$correct_answer = "any answer";
+		//	$choice = $_POST('choice');
+		//	if($correct_answer == $choice)
+		//		echo 'answer is correct';
+		//	else
+		//		echo 'answer is incorrect';
+		//?>
 		if(true){
 		$( document ).ready(function() {
 			$( "a" ).click(function( event ) {
