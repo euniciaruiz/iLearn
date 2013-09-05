@@ -87,7 +87,13 @@
 		<center>
 		
 		
+<<<<<<< HEAD
 		
+=======
+		<?php echo anchor('subjectController/play', '<font face="century gothic" color="#F58EA1" size="32">START</font>');?><br>
+		<?php echo anchor('subjectController/help', '<font face="century gothic" color="#98EDD4" size="32">Tutorial</font>');?><br>
+			
+>>>>>>> dd17da06e320400c917ccbcc1e7d992b6ba6daf2
 		</center>
 		
 		<div class="md-overlay"></div>

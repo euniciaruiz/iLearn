@@ -50,8 +50,13 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'postgres';
+<<<<<<< HEAD
 $db['default']['password'] = '123';
 $db['default']['database'] = 'iLearn';
+=======
+$db['default']['password'] = 'iheartme';
+$db['default']['database'] = 'ilearn';
+>>>>>>> dd17da06e320400c917ccbcc1e7d992b6ba6daf2
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

@@ -11,3 +11,9 @@ b. Jupiter
 c. Mars
 d. Pluto
 b. Jupiter
+
+What is the hottest planet in the solar system?
+a. Mars
+b. Venus
+c. Earth
+d. Mercury
