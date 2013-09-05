@@ -10,8 +10,8 @@
 		
 	</head>
 	
-	<body bgcolor="black">
-		<div class="md-modal md-effect-3" id="modal-3">
+	<body>
+		<div class="md-modal md-effect-2" id="modal-2">
 			<div class="md-content">
 				<h3>How to Play</h3>
 				<div>
@@ -76,13 +76,14 @@
 					}?>
 				<button class="md-trigger" data-modal="modal-1">Change User</button>
 				<button class="md-trigger" data-modal="modal-4">Create User</button>
+
 			</header>
 			<div class="main clearfix">
-				<div class="column">
-					<button class="md-trigger" data-modal="modal-3">Help</button>
+				<div class="column" align="right">
+					<button class="md-trigger" data-modal="modal-2">Help</button>
 				</div>
 				<div class="column">
-					<?php echo anchor('subjectController/play', 'Start');?><br>
+					<?php echo anchor('subjectController/play', '<big><big><big><big>Start</big></big></big></big>');?><br>
 				</div>
 			</div>
 		</div>
