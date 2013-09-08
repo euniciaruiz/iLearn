@@ -4,7 +4,7 @@ a. one
 b. two
 c. three
 d. four
-c.three
+c. three
 
 What number is indicated by the prefix tetra?*
 a. one

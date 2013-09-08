@@ -8,11 +8,15 @@ class SubjectController extends CI_Controller {
 		$this->load->view('game/subjectList', $data);
 	}
 	
+	public function help(){
+		$this->load->view('mainmenu/help');
+	}
 	public function general_knowledge()
 	{
 		$subject_id = $this->input->post('id');
 		$this->load->model('question');
 		$question = $this->question->getSubjectQuestionList($subject_id);
+		$answer = $this->question->getCorrectAnswer($question_id);
 		$this->load->model('choice');
 		$choice = $this->choice->getChoiceList();
 		
