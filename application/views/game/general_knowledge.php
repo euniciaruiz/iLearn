@@ -45,11 +45,14 @@
 		if(true){
 		$( document ).ready(function() {
 			$(".btn").click(function( event ) {
-				//if(($(this).attr("value").toLowerCase() === correctAnswer.toLowerCase())
+if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
 				{
-				alert(correctAnswer.toLowerCase() + " " + $(this).attr("value").toLowerCase());
+				alert("answer is correct!");
 				}	
-			});
+				else{
+				alert("answer is incorrect!");
+				}
+				});
 		});
 		}
 		else{
