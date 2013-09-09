@@ -34,11 +34,20 @@
         <button class="btn btn-1 btn-3"><a><?php echo $mathematics[$rand][1][1]; ?></a></button>
         <button class="btn btn-3 btn-4"><a><?php echo $mathematics[$rand][1][2]; ?></a></button>
         <button class="btn btn-2 btn-4"><a><?php echo $mathematics[$rand][1][3]; ?></a></button>
+		
+		<?php
+			$correctAnswer = $mathematics[$rand][2];
+		?>
+		
 		<script>
+		var correctAnswer = '<?php echo $correctAnswer ?>';
 		if(true){
 		$( document ).ready(function() {
-			$( "a" ).click(function( event ) {
-				alert( "Your Answer is Correct!" );
+			$(".btn").click(function( event ) {
+				//if(($(this).attr("value").toLowerCase() === correctAnswer.toLowerCase())
+				{
+				alert(correctAnswer.toLowerCase() + " " + $(this).attr("value").toLowerCase());
+				}	
 			});
 		});
 		}
@@ -51,8 +60,7 @@
 		}
 		
 	 
-		</script>
-      </div>
+		</script>     </div>
     </div>
   </body>
 

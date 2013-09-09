@@ -27,19 +27,27 @@
         </div>
 		<?php $rand = array_rand($english); ?>
         <div class="hero-unit hero-unit-2">
-          <p><?php echo $english[$rand][0]; ?></p>
+          <p><?php echo $english[$rand][0];
+			?></p>
           <div class="btns"></div>
         </div>
-
-        <button class="btn btn-1 btn-2"><a><?php echo $english[$rand][1][0]; ?></a></button>
-        <button class="btn btn-1 btn-3"><a><?php echo $english[$rand][1][1]; ?></a></button>
-        <button class="btn btn-2 btn-4"><a><?php echo $english[$rand][1][2]; ?></a></button>
-        <button class="btn btn-3 btn-4"><a><?php echo $english[$rand][1][3]; ?></a></button>
+		
+        <button class="btn btn-1 btn-2"  value="<?php echo $english[$rand][1][0]; ?>"><?php echo $english[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-3"  value="<?php echo $english[$rand][1][1]; ?>"><?php echo $english[$rand][1][1]; ?></button>
+        <button class="btn btn-2 btn-4"  value="<?php echo $english[$rand][1][2]; ?>"><?php echo $english[$rand][1][2]; ?></button>
+        <button class="btn btn-3 btn-4"  value="<?php echo $english[$rand][1][3]; ?>"><?php echo $english[$rand][1][3]; ?></button>
+		<?php
+			$correctAnswer = $english[$rand][2];
+		?>
 		<script>
+		var correctAnswer = '<?php echo $correctAnswer ?>';
 		if(true){
 		$( document ).ready(function() {
-			$( "a" ).click(function( event ) {
-				alert( "Your Answer is Correct!" );
+			$(".btn").click(function( event ) {
+				//if(($(this).attr("value").toLowerCase() === correctAnswer.toLowerCase())
+				{
+				alert(correctAnswer.toLowerCase() + " " + $(this).attr("value").toLowerCase());
+				}	
 			});
 		});
 		}
