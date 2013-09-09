@@ -48,7 +48,7 @@
 					<ul>
 						<?php foreach($query->result() as $player) {
 							if ($player->id > 0) {
-								echo $player->name;
+								echo anchor('mainmenuController',$player->name);
 								echo "<br/><br/>";
 							}
 							else {
@@ -87,19 +87,7 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
-	
-		<center>
-		
-		
 
-		<?php echo anchor('subjectController/play', '<font face="century gothic" color="#F58EA1" size="32">START</font>');?><br>
-		<?php echo anchor('subjectController/help', '<font face="century gothic" color="#98EDD4" size="32">Tutorial</font>');?><br>
-			
-		</center>
-
-=======
->>>>>>> 1f5e2dee890191d4ba8b5c52e364f20434d7b143
 		
 		<div class="md-overlay"></div>
 		<script src="<?php echo base_url();?>js/classie.js"></script>
