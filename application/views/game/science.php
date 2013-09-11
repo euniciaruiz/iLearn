@@ -13,29 +13,29 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
 	<script src="<?php echo base_url();?>js/jquery.js"></script>
 	<title>Interactive Learning Game</title>
-</head> 
-<body>
+</head>
+ <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <img src="<?php echo base_url();?>images/icontelescope.jpg" class="image image-3">
+        <img src="<?php echo base_url();?>images/images-3.jpg" class="image image-1">
 		<i class="icon icon-home"></i>
 
+        <img src="<?php echo base_url(); ?>images/language_alphabet1.jpg" class="image image-2">
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
 		<?php $rand = array_rand($science); ?>
         <div class="hero-unit hero-unit-2">
-          <p><?php echo $science[$rand][0]; ?></p>
+          <p><?php echo $science[$rand][0];
+			?></p>
           <div class="btns"></div>
         </div>
-
-        <button class="btn btn-1 btn-2"><a><?php echo $science[$rand][1][0]; ?></a></button>
-        <button class="btn btn-1 btn-3"><a><?php echo $science[$rand][1][1]; ?></a></button>
-        <button class="btn btn-3 btn-4"><a><?php echo $science[$rand][1][2]; ?></a></button>
-        <button class="btn btn-2 btn-4"><a><?php echo $science[$rand][1][3]; ?></a></button>
-        <img src="<?php echo base_url();?>images/workinginalaboratory-1.gif" class="image image-4">
-
+		
+        <button class="btn btn-1 btn-2"  value="<?php echo $science[$rand][1][0]; ?>"><?php echo $science[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-3"  value="<?php echo $science[$rand][1][1]; ?>"><?php echo $science[$rand][1][1]; ?></button>
+        <button class="btn btn-2 btn-4"  value="<?php echo $science[$rand][1][2]; ?>"><?php echo $science[$rand][1][2]; ?></button>
+        <button class="btn btn-3 btn-4"  value="<?php echo $science[$rand][1][3]; ?>"><?php echo $science[$rand][1][3]; ?></button>
 		
 		<?php
 			$correctAnswer = $science[$rand][2];
@@ -45,13 +45,14 @@
 		if(true){
 		$( document ).ready(function() {
 			$(".btn").click(function( event ) {
-		if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
+				if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
 				{
 				alert("answer is correct!");
 				}	
 				else{
 				alert("answer is incorrect!");
-				}			});
+				}
+			});
 		});
 		}
 		else{
@@ -64,10 +65,10 @@
 		
 	 
 		</script>
-		</div>
+      </div>
     </div>
   </body>
-
 </html>
+
 
 

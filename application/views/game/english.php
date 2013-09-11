@@ -36,6 +36,7 @@
         <button class="btn btn-1 btn-3"  value="<?php echo $english[$rand][1][1]; ?>"><?php echo $english[$rand][1][1]; ?></button>
         <button class="btn btn-2 btn-4"  value="<?php echo $english[$rand][1][2]; ?>"><?php echo $english[$rand][1][2]; ?></button>
         <button class="btn btn-3 btn-4"  value="<?php echo $english[$rand][1][3]; ?>"><?php echo $english[$rand][1][3]; ?></button>
+		
 		<?php
 			$correctAnswer = $english[$rand][2];
 		?>

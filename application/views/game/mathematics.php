@@ -17,39 +17,42 @@
  <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <img src="<?php echo base_url();?>images/mat.jpg" class="image">
+        <img src="<?php echo base_url();?>images/images-3.jpg" class="image image-1">
 		<i class="icon icon-home"></i>
 
+        <img src="<?php echo base_url(); ?>images/language_alphabet1.jpg" class="image image-2">
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
 		<?php $rand = array_rand($mathematics); ?>
         <div class="hero-unit hero-unit-2">
-          <p><?php echo $mathematics[$rand][0]; ?></p>
+          <p><?php echo $mathematics[$rand][0];
+			?></p>
           <div class="btns"></div>
         </div>
-
-        <button class="btn btn-1 btn-2" i><a><?php echo $mathematics[$rand][1][0]; ?></a></button>
-        <button class="btn btn-1 btn-3"><a><?php echo $mathematics[$rand][1][1]; ?></a></button>
-        <button class="btn btn-3 btn-4"><a><?php echo $mathematics[$rand][1][2]; ?></a></button>
-        <button class="btn btn-2 btn-4"><a><?php echo $mathematics[$rand][1][3]; ?></a></button>
+		
+        <button class="btn btn-1 btn-2"  value="<?php echo $mathematics[$rand][1][0]; ?>"><?php echo $mathematics[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-3"  value="<?php echo $mathematics[$rand][1][1]; ?>"><?php echo $mathematics[$rand][1][1]; ?></button>
+        <button class="btn btn-2 btn-4"  value="<?php echo $mathematics[$rand][1][2]; ?>"><?php echo $mathematics[$rand][1][2]; ?></button>
+        <button class="btn btn-3 btn-4"  value="<?php echo $mathematics[$rand][1][3]; ?>"><?php echo $mathematics[$rand][1][3]; ?></button>
 		
 		<?php
 			$correctAnswer = $mathematics[$rand][2];
 		?>
-		
 		<script>
 		var correctAnswer = '<?php echo $correctAnswer ?>';
 		if(true){
 		$( document ).ready(function() {
-		if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
+			$(".btn").click(function( event ) {
+				if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
 				{
 				alert("answer is correct!");
 				}	
 				else{
 				alert("answer is incorrect!");
-				}			});
+				}
+			});
 		});
 		}
 		else{
@@ -61,9 +64,11 @@
 		}
 		
 	 
-		</script>     </div>
+		</script>
+      </div>
     </div>
   </body>
-
 </html>
+
+
 
