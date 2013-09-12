@@ -16,7 +16,6 @@ class SubjectController extends CI_Controller {
 		$subject_id = $this->input->post('id');
 		$this->load->model('question');
 		$question = $this->question->getSubjectQuestionList($subject_id);
-		$answer = $this->question->getCorrectAnswer($question_id);
 		$this->load->model('choice');
 		$choice = $this->choice->getChoiceList();
 		
