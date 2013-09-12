@@ -6,4 +6,10 @@ class Users extends CI_Model{
 		return $query;
 	}
 	
+	function getUserById($id) {
+		$this->db->where('id', $id);
+		$result = $this->db->get('player');
+		return $result;
+	}
+	
 }

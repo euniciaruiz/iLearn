@@ -11,4 +11,5 @@ class Player extends CI_Model {
 		$this->db->insert('player', $data);
 		return;
 	}
+	
 }

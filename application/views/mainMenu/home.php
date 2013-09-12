@@ -48,7 +48,9 @@
 					<ul>
 						<?php foreach($query->result() as $player) {
 							if ($player->id > 0) {
-								echo anchor('mainmenuController',$player->name);
+						?>
+								<a href="<?php echo base_url() ?>index.php/mainmenuController/display_player/<?php echo $player->id ?>"><?php echo $player->name; ?></a>
+						<?php	
 								echo "<br/><br/>";
 							}
 							else {
