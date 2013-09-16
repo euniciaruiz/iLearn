@@ -31,8 +31,9 @@
 				<?php echo form_open('mainmenuController/create');?>
 					<ul>
 						<p>
+							<?php echo form_error('name'); ?>
 							<label for="content">Name:</label>
-							<input type="text" name="name" />
+							<input type="text" name="name" value="<?php echo set_value('name'); ?>" />
 						</p>
 					</ul>
 					

@@ -15,12 +15,18 @@ class MainmenuController extends CI_Controller {
 	
 	function create()
 	{
-		$data = array(
-			'name' => $this->input->post('name')
-		);
-		
-		$this->player->addPlayer($data);
-		$this->index();
+		$this->form_validation->set_rules('name', 'Player Name', 'required|is_unique[player.name]');
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->index();
+		}
+		else {
+			$data = array(
+				'name' => $this->input->post('name')
+			);
+			$this->player->addPlayer($data);
+			$this->index();
+		}
 	}
 	
 	function help()
