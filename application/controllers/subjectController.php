@@ -128,26 +128,26 @@ class SubjectController extends CI_Controller {
 	}
 	
 	public function next_question() {
-		$data = array(
-				'subject_name' => $this->input->post('$subject_name'),
-				'subject_array' => $this->input->post('$subject')
-		);
-
-		if($data['subject_name'] == "general_knowledge") {
-			$data['general_knowledge'] = $data['subject_array'];
-			$this->load->view('game/general_knowledge', $data);
-		}
-		else if($data['subject_name'] == "mathematics") {
-			$data['mathematics'] = $data['subject_array'];
-			$this->load->view('game/mathematics', $data['subject_array']);
-		}
-		else if($data['subject_name'] == "science") {
-			$data['science'] = $data['subject_array'];
-			$this->load->view('game/science', $data['subject']);
-		}
+ 		$data = array(
+				'subject_name' => $this->input->post('subject_name'),
+				'subject_array' => $this->input->post('subject')
+ 		);
+ 
+ 		if($data['subject_name'] == "general_knowledge") {
+			$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
+ 			$this->load->view('game/general_knowledge', $data);
+ 		}
+ 		else if($data['subject_name'] == "mathematics") {
+			$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
+			$this->load->view('game/mathematics', $data);
+ 		}
+ 		else if($data['subject_name'] == "science") {
+			$data['science'] = unserialize(base64_decode($data['subject_array']));
+			$this->load->view('game/science', $data);
+ 		}
 		else {
-			$data['english'] = $data['subject_array'];
-			$this->load->view('game/english', $data['subject']);
-		}
-	}
+			$data['english'] = unserialize(base64_decode($data['subject_array']));
+			$this->load->view('game/english', $data);
+ 		}
+ 	}
 }

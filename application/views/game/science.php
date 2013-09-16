@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/project.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
 	<script src="<?php echo base_url();?>js/jquery.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css" />
+    <script src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
+    <script src="<?php echo base_url();?>js/jquery-ui.js"></script>
 	<title>Interactive Learning Game</title>
 </head>
  <body>
@@ -47,10 +50,10 @@
 			$(".btn").click(function( event ) {
 				if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
 				{
-				alert("answer is correct!");
+					$( "#dialog-message-correct" ).dialog();
 				}	
 				else{
-				alert("answer is incorrect!");
+					$( "#dialog-message-incorrect" ).dialog();
 				}
 			});
 		});
@@ -58,13 +61,34 @@
 		else{
 		$( document ).ready(function() {
 			$( "a" ).click(function( event ) {
-				alert( "Your Answer is Incorrect!" );
+				$( "#dialog-message-incorrect" ).dialog({
+					autoOpen: false,
+				    height: 300,
+				    width: 350,
+				    modal: true,
+				});
 			});
 		});
 		}
-		
-	 
 		</script>
+		<div id="dialog-message-correct" title="YEHEEY!">
+			<p class="validateTips">The answer is correct!</p><br/>
+			<?php unset($science[$rand]);?>
+			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="subject_name" value="science" />
+				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
+				<button>Next Question</button>
+			<?php echo form_close(); ?>
+		</div>
+		<div id="dialog-message-incorrect" title="SORRY!">
+			<p class="validateTips">The answer is incorrect!</p><br/>
+			<?php unset($science[$rand]);?>
+			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="subject_name" value="science" />
+				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
+				<button>Next Question</button>
+			<?php echo form_close(); ?>
+		</div>
       </div>
     </div>
   </body>
