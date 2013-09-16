@@ -1,0 +1,98 @@
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What number is indicated by the prefix tetra?', 'four', 1, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the last vowel in the English alphabet?', 'u', 1, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Is an epilogues at the beginning or at the end of a book?', 'at the end', 1, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What A word is the name given to a drug that counteracts a poison?', 'Antidote', 1, 2);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What do you call a word having the same sound or spelling as another?', 'A homonym', 1, 2);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('In the James Bond novels who is his boss?', 'M', 1, 2);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the silent letter in the word psychiatrist?', 'the letter p', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the collective name for a group of angels?', 'Host', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('In which city is Romeo and Juliet set?', 'Verona', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('If canine equals dog what does vulpine equal?', 'Fox', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('How does Anno Domini translate in English?', 'In the year of the Lord', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which author, born in 1972, wrote the poems Ode To The West Wind and To A Skylark?', 'Percy Shelley', 1, 3);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which arch-enemy of Peter pan was played by Dustin Hoffman on film?', 'Captain Hook', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which wimple weares live in convents?', 'Nuns', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the name of the largest castle in the capital city of Scotland?', 'Edinburgh Castle', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What name is given to a 60th part of an hour?', 'A minute', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What part of the body is treated by an optician?', 'The eyes', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What part of the body is treated by a chiropidist?', 'The feet', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which biblical trio bore gifts of gold, frankincense and myrrh?', 'The Three Kings', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('By what title is the Bishop of Rome also known?', 'The Pope', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the Italian word for pie?', 'Pizza', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What type of creatures live in an aquarium?', 'fish', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('In the fairytale, who scaled a giant beanstalk and battled with a giant?', 'Jack', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('In mythology, whose face was said to have launched a thousand ships?', 'Helen of Troy', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('According to the Bible which sea did Moses part the waves of?', 'Red Sea', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What country shares its name with a bird traditionally eaten at Christmas?', 'Turkey', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('What is the name given to the tomb of a pharaoh in ancient Egypt?', 'Pyramid', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Traditionally, how many lives is a cat said to have?', 'One', 2, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('John had 15 books. Gus borrowed 4 of them, how many books does John have on hand?', '11', 3, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('In a garden, there were 4 roses each with 4 leaves. How many leaves were there present?', '16', 3, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Marnie received a gift enclosed in a box with six sides. What is the box called?', 'pentagon', 3, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which part of the body contains the cornea, the retina, and the pupil?', 'The eye', 4, 1);
+
+INSERT INTO question(description, answer, subject_id, difficulty_id)
+VALUES ('Which Roman God gave his name to the largest planet in our solar system?', 'Jupiter', 4, 1);

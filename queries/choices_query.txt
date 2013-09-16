@@ -1,0 +1,404 @@
+INSERT INTO choice(choice_description, question_id)
+VALUES ('two', 1);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('three', 1);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('four', 1);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('one', 2);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('two', 2);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('three', 2);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('four', 2);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('a', 3);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('i', 3);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('o', 3);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('u', 3);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('at the end', 4);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('at the beginning', 4);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('at the middle', 4);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('none of the above', 4);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Antidote', 5);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 5);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 5);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 5);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('An antonym', 6);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A synonym', 6);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A homonym', 6);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A', 6);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A', 7);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('G', 7);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('L', 7);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('M', 7);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('the letter p', 8);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('the letter c', 8);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('the letter i', 8);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('the letter r', 8);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 9);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Herd', 9);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Pack', 9);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Host', 9);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Verona', 10);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Venice', 10);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Madrid', 10);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Mississippi', 10);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Cat', 11);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Fox', 11);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Tiger', 11);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Bird', 11);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('In the year of the Lord', 12);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Before Christ', 12);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('In the year of the Dinosaurs', 12);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('After Christ', 12);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Kenneth Grahame', 13);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('William Shakespear', 13);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Percy Shelley', 13);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Thomas Hardy', 13);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Captain Sparrow', 14);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Captain Hook', 14);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Captain Barbossa', 14);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Captain Arch', 14);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Prisoners', 15);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Priests', 15);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Nuns', 15);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Students', 15);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 16);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 16);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 16);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Edinburgh Castle', 16);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A minute', 17);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A second', 17);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A millisecond', 17);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('A day', 17);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The head', 18);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The bones', 18);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The eyes', 18);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The feet', 18);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The head', 19);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The bones', 19);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The eyes', 19);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The feet', 19);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Three Kings', 20);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Three Knights', 20);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Three Dukes', 20);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Three Slaves', 20);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The King', 21);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Pope', 21);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Prophet', 21);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The Cardinal', 21);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 22);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Ciao', 22);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Veto', 22);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Pizza', 22);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('eagle', 23);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('alien', 23);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('fish', 23);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('snake', 23);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Jack', 24);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Hercules', 24);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Harry Potter', 24);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Peter Pan', 24);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Prosperina', 25);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Helen of Troy', 25);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Medusa', 25);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 25);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Red Sea', 26);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('River Styx', 26);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 26);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 26);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 27);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 27);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 27);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Turkey', 27);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Taj Mahal', 28);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Great Wall', 28);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 28);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Pyramid', 28);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Five', 29);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Nine', 29);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Ten', 29);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('One', 29);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('12', 30);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('11', 30);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('10', 30);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('14', 30);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('4', 31);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('16', 31);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('20', 31);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('15', 31);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('triangle', 32);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('heptagon', 32);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('hexagon', 32);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('pentagon', 32);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 33);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 33);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('', 33);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('The eye', 33);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Venus', 34);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Jupiter', 34);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Mars', 34);
+
+INSERT INTO choice(choice_description, question_id)
+VALUES ('Pluto', 34);

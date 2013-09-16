@@ -1,0 +1,38 @@
+create table subject(
+id serial,
+subject_name varchar,
+
+primary key(id)
+);
+
+
+create table difficulty(
+id serial,
+difficulty_level varchar,
+
+primary key(id)
+);
+
+
+create table question(
+id serial,
+description varchar,
+answer varchar,
+subject_id int,
+difficulty_id int
+
+primary key(id),
+foreign key(subject_id) references subject(id),
+foreign key(difficulty_id) references difficulty(id)
+);
+
+create table choice(
+id serial,
+choice_description varchar,
+question_id int,
+
+primary key(id),
+foreign key(question_id) references question(id)
+);
+
+
