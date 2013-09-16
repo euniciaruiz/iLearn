@@ -33,7 +33,11 @@
 						<p>
 							<?php echo form_error('name'); ?>
 							<label for="content">Name:</label>
-							<input type="text" name="name" value="<?php echo set_value('name'); ?>" />
+							<input style="float:right;clear:right" type="text" name="name" value="<?php echo set_value('name'); ?>" /></br>
+							<label for="content">Password:</label>
+							<input style="float:right;clear:right" type="password" name="password" value="<?php echo set_value('password'); ?>" /></br>
+							<label for="content">Confirm Password:</label>
+							<input style="float:right;clear:right" type="password" name="passconf" value="<?php echo set_value('passconf'); ?>" />
 						</p>
 					</ul>
 					

@@ -15,14 +15,17 @@ class MainmenuController extends CI_Controller {
 	
 	function create()
 	{
-		$this->form_validation->set_rules('name', 'Player Name', 'required|is_unique[player.name]');
+		$this->form_validation->set_rules('name', 'Name', 'trim|required|is_unique[player.name]|xss_clean');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]|md5');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->index();
 		}
 		else {
 			$data = array(
-				'name' => $this->input->post('name')
+				'name' => $this->input->post('name'),
+				'password' => $this->input->post('password')
 			);
 			$this->player->addPlayer($data);
 			$this->index();
