@@ -51,7 +51,7 @@ class MainmenuController extends CI_Controller {
 	function display_player($id) {
 		$this->load->model('users');
 		$data['query'] = $this->users->getUserById($id);
-		$this->load->view('mainMenu/home', $data);
+		$this->load->view('mainMenu/login_form', $data);
 		
 	}
 	
