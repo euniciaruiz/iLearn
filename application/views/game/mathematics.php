@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/fontawesome.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/project.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
-	<script src="<?php echo base_url();?>js/jquery.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css" />
     <script src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
     <script src="<?php echo base_url();?>js/jquery-ui.js"></script>
@@ -40,37 +39,45 @@
         <button class="btn btn-2 btn-4"  value="<?php echo $mathematics[$rand][1][2]; ?>"><?php echo $mathematics[$rand][1][2]; ?></button>
         <button class="btn btn-3 btn-4"  value="<?php echo $mathematics[$rand][1][3]; ?>"><?php echo $mathematics[$rand][1][3]; ?></button>
 		
-		<?php
-			$correctAnswer = $mathematics[$rand][2];
-		?>
 		<script>
-		var correctAnswer = '<?php echo $correctAnswer ?>';
-		if(true){
-		$( document ).ready(function() {
-			$(".btn").click(function( event ) {
-				if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
-				{
-					$( "#dialog-message-correct" ).dialog();
-				}	
-				else{
-					$( "#dialog-message-incorrect" ).dialog();
-				}
-			});
-		});
-		}
-		else{
-		$( document ).ready(function() {
-			$( "a" ).click(function( event ) {
+			var correctAnswer = '<?php echo $mathematics[$rand][2]; ?>';
+
+			$( document ).ready(function() {
+				$(".btn").click(function( event ) {
+					if(($(this).attr("value").toLowerCase()) == correctAnswer.toLowerCase())
+					{
+						$( "#dialog-message-correct" ).dialog( "open" );
+					}	
+					else{
+						$( "#dialog-message-incorrect" ).dialog("open");
+					}
+				});
+
+				$( "#dialog-message-correct" ).dialog({
+					autoOpen: false,
+					show: {
+						effect: "blind",
+						duration: 1000
+					},
+					hide: {
+						effect: "explode",
+					    duration: 1000
+					}
+				});
 				$( "#dialog-message-incorrect" ).dialog({
 					autoOpen: false,
-				    height: 300,
-				    width: 350,
-				    modal: true,
+					show: {
+						effect: "blind",
+						duration: 1000
+					},
+					hide: {
+						effect: "explode",
+					    duration: 1000
+					}
 				});
 			});
-		});
-		}
 		</script>
+
 		<div id="dialog-message-correct" title="YEHEEY!">
 			<p class="validateTips">The answer is correct!</p><br/>
 			<?php unset($mathematics[$rand]);?>
