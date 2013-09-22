@@ -51,17 +51,12 @@
 				<h3>Select User</h3>
 				<div>
 					<ul>
-						<?php foreach($query->result() as $player) {
-							if ($player->id > 0) {
-						?>
-								<a href="<?php echo base_url() ?>index.php/mainmenuController/display_player/<?php echo $player->id ?>"><?php echo $player->name; ?></a>
-						<?php	
-								echo "<br/><br/>";
-							}
-							else {
-								echo "no players found";
-							}
-						}?>
+						<p>
+							<label for="content">Username:</label>
+							<input style="float:right;clear:right" type="text" name="username" value="<?php echo set_value('username'); ?>" /></br>
+							<label for="content">Password:</label>
+							<input style="float:right;clear:right" type="password" name="password" value="<?php echo set_value('password'); ?>" /></br>
+						</p>	
 					</ul>
 					<button class="md-close">Close me!</button>
 				</div>
@@ -69,18 +64,6 @@
 		</div>
 		<div class="container">
 			<header>
-				<h1>iLearn<span>Interactive Learning Game</span></h1>
-				<h3><span><?php foreach($query->result() as $player) {
-					if ($player->id > 0) {
-						echo "Welcome back ";
-						echo $player->name;
-						echo "!";
-						break;
-					}
-					else {
-						echo "No Players Found";
-					}
-					}?>
 				<button class="md-trigger" data-modal="modal-1">Change User</button>
 				<button class="md-trigger" data-modal="modal-4">Create User</button>
 

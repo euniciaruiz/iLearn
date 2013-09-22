@@ -1,11 +1,6 @@
 <?php 
 
 class LoginController extends CI_Controller {
-	
-	function index() {
-		$data['main_content'] = 'login_form';
-		$this->load->view('login_form');
-	}
 
 	function validate_credentials() {
 		$username = $this->input->post('username');
@@ -23,7 +18,7 @@ class LoginController extends CI_Controller {
 			redirect('subjectController/play');
 		}
 		else {
-			$this->index();
+			$this->load->view('mainMenu/home');
 		}
 	}
 
