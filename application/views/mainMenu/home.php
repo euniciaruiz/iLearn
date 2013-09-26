@@ -4,10 +4,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Main Menu</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/default.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/component.css" />
-		<script src="<?php echo base_url();?>js/modernizr.custom.js"></script>
-		
+		<link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald:400,300,700" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/project.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link href="<?php echo base_url();?>css/home.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/component.css" />
+	    	<script src="<?php echo base_url();?>js/modernizr.custom.js"></script>		
 	</head>
 	
 	<body>
@@ -24,16 +29,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="md-modal md-effect-4" id="modal-4">
+		<div class="md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
 				<h3>Create User</h3>
 				<div>
-				<?php echo form_open('mainmenuController/create');?>
+				<?php echo form_open('playerController/create');?>
 					<ul>
 						<p>
 							<?php echo form_error('name'); ?>
-							<label for="content">Name:</label>
-							<input style="float:right;clear:right" type="text" name="name" value="<?php echo set_value('name'); ?>" /></br>
+							<label for="content">Username:</label>
+							<input style="float:right;clear:right" type="text" name="username" value="<?php echo set_value('username'); ?>" /></br>
 							<label for="content">Password:</label>
 							<input style="float:right;clear:right" type="password" name="password" value="<?php echo set_value('password'); ?>" /></br>
 							<label for="content">Confirm Password:</label>
@@ -48,7 +53,7 @@
 		</div>
 		<div class="md-modal md-effect-1" id="modal-1">
 			<div class="md-content">
-				<h3>Select User</h3>
+				<h3>Login</h3>
 				<div>
 					<ul>
 						<p>
@@ -62,21 +67,37 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<header>
-				<button class="md-trigger" data-modal="modal-1">Change User</button>
-				<button class="md-trigger" data-modal="modal-4">Create User</button>
 
-			</header>
-			<div class="main clearfix">
-				<div class="column" align="right">
-					<button class="md-trigger" data-modal="modal-2">Help</button>
-				</div>
-				<div class="column">
-					<?php echo anchor('subjectController/play', '<big><big><big><big>Start</big></big></big></big>');?><br>
-				</div>
-			</div>
-		</div>
+	<div id="page-wrapper">
+      <div id="absolute-wrapper">
+        <div class="rectangle rectangle-1 rectangle-2">
+          <h1 class="heading">iLearn</h1>
+          <div class="dom-body-text paragraph paragraph-1 paragraph-2">
+          	<p><button class="md-trigger" data-modal="modal-1">Login</button></p>
+          </div>
+          <div class="dom-body-text paragraph paragraph-1 paragraph-3">
+             <p><button class="md-trigger" data-modal="modal-16">Sign-up</button></p>
+          </div>
+          <div class="dom-body-text paragraph paragraph-4">
+            <p>Interactive Learning Game</p>
+          </div>
+        </div>
+        <div class="rectangle rectangle-3">
+          <img src="images/black_invert_30x40.png" class="image">
+        </div>
+        <div class="image image-1">
+          <?php echo form_open('subjectController/play');?>
+          <button class="btn btn-1">PLAY</button>
+          <?php echo form_close();?>
+          <button class="btn btn-2">HELP</button>
+        </div>
+        <div class="rectangle rectangle-1 rectangle-4">
+          <div class="dom-body-text paragraph">
+            <p>Copyright @&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 		
 		<div class="md-overlay"></div>
