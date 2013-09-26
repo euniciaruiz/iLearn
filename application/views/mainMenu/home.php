@@ -55,15 +55,17 @@
 			<div class="md-content">
 				<h3>Login</h3>
 				<div>
-					<ul>
-						<p>
-							<label for="content">Username:</label>
-							<input style="float:right;clear:right" type="text" name="username" value="<?php echo set_value('username'); ?>" /></br>
-							<label for="content">Password:</label>
-							<input style="float:right;clear:right" type="password" name="password" value="<?php echo set_value('password'); ?>" /></br>
-						</p>	
-					</ul>
-					<button class="md-close">Close me!</button>
+					<?php echo form_open('loginController/validate_credentials');?>
+						<ul>
+							<p>
+								<label for="content">Username:</label>
+								<input style="float:right;clear:right" type="text" name="username" value="<?php echo set_value('username'); ?>" /></br>
+								<label for="content">Password:</label>
+								<input style="float:right;clear:right" type="password" name="password" value="<?php echo set_value('password'); ?>" /></br>
+							</p>
+						</ul>
+						<input type="submit" value="Login" />
+					<?php echo form_close(); ?>
 				</div>
 			</div>
 		</div>
