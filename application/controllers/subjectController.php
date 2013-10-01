@@ -36,7 +36,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
-		
+		$data['score'] = 0;
 		$data['general_knowledge'] = $general_knowledge;
 		$this->load->view('game/general_knowledge', $data);
 	}
@@ -65,6 +65,8 @@ class SubjectController extends CI_Controller {
 			$mathematics[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
 			$question_counter++;
 		}
+		
+		$data['score'] = 0;
 		$data['mathematics'] = $mathematics;
 		$this->load->view('game/mathematics', $data);
 	}
@@ -94,6 +96,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
+		$data['score'] = 0;
 		$data['science'] = $science;
 		$this->load->view('game/science', $data);
 	}
@@ -123,6 +126,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
+		$data['score'] = 0;
 		$data['english'] = $english;
 		$this->load->view('game/english', $data);
 	}
@@ -134,18 +138,22 @@ class SubjectController extends CI_Controller {
  		);
  
  		if($data['subject_name'] == "general_knowledge") {
+			$data['score'] = unserialize($data['score']);
 			$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
  			$this->load->view('game/general_knowledge', $data);
  		}
  		else if($data['subject_name'] == "mathematics") {
+			$data['score'] = unserialize($data['score']);
 			$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
 			$this->load->view('game/mathematics', $data);
  		}
  		else if($data['subject_name'] == "science") {
+			$data['score'] = unserialize($data['score']);
 			$data['science'] = unserialize(base64_decode($data['subject_array']));
 			$this->load->view('game/science', $data);
  		}
 		else {
+			$data['score'] = unserialize($data['score']);
 			$data['english'] = unserialize(base64_decode($data['subject_array']));
 			$this->load->view('game/english', $data);
  		}

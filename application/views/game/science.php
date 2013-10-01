@@ -81,8 +81,10 @@
 			<p class="validateTips">The answer is correct!</p><br/>
 			<?php unset($science[$rand]);?>
 			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="scoretemp" value="<?php echo serialize($score + 2);?>" />
 				<input type="hidden" name="subject_name" value="science" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
+				Your Score: <?php echo $score + 2;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
@@ -90,8 +92,10 @@
 			<p class="validateTips">The answer is incorrect!</p><br/>
 			<?php unset($science[$rand]);?>
 			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="scoretemp" value="<?php echo serialize($score);?>" />
 				<input type="hidden" name="subject_name" value="science" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
+				Your Score: <?php echo $score;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
