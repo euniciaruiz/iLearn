@@ -133,6 +133,7 @@ class SubjectController extends CI_Controller {
 	
 	public function next_question() {
  		$data = array(
+				'score' => $this->input->post('scoretemp'),
 				'subject_name' => $this->input->post('subject_name'),
 				'subject_array' => $this->input->post('subject')
  		);
