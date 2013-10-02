@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php do{?>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -21,13 +21,13 @@
       <div id="absolute-wrapper">
         <img src="<?php echo base_url();?>images/images-3.jpg" class="image image-1">
 		<i class="icon icon-home"></i>
-
+		
         <img src="<?php echo base_url(); ?>images/language_alphabet1.jpg" class="image image-2">
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div><br><br>
-		
+		<font size="20"> <b> Lives: <?php echo $lives;?> </b> </font> 
 		<?php $rand = array_rand($english); ?>
         <div class="hero-unit hero-unit-2">
           <p><?php echo $english[$rand][0];
@@ -106,9 +106,11 @@
 			<?php echo form_close(); ?>
 		</div>
       </div>
-    </div>
+    </div><br><br>
+	
   </body>
 </html>
+
 
 
 

@@ -26,7 +26,7 @@
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
-        </div>
+        </div><br><br><font size="20"> <b> Lives: <?php echo $lives;?> </b> </font> 
 		<?php $rand = array_rand($mathematics); ?>
         <div class="hero-unit hero-unit-2">
           <p><?php echo $mathematics[$rand][0];
