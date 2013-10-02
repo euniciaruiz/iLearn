@@ -36,6 +36,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
+		$data['question_limit'] = 0;
 		$data['score'] = 0;
 		$data['lives'] = 3;
 		$data['general_knowledge'] = $general_knowledge;
@@ -67,6 +68,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
+		$data['question_limit'] = 0;
 		$data['score'] = 0;
 		$data['lives'] = 3;
 		$data['mathematics'] = $mathematics;
@@ -129,6 +131,8 @@ class SubjectController extends CI_Controller {
 			$english[$question_counter] = array($question[$i][1], $choices, $question[$i][2]);
 			$question_counter++;
 		}
+		
+		$data['question_limit'] = 0;
 		$data['lives'] = 3;
 		$data['score'] = 0;
 		$data['english'] = $english;
