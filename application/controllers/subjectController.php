@@ -98,6 +98,7 @@ class SubjectController extends CI_Controller {
 			$question_counter++;
 		}
 		
+		$data['question_limit'] = 0;
 		$data['score'] = 0;
 		$data['lives'] = 3;
 		$data['science'] = $science;
@@ -136,6 +137,7 @@ class SubjectController extends CI_Controller {
 	
 	public function next_question() {
  		$data = array(
+				'question_limit' => $this->input->post('questionlimit'),
 				'lives' => $this->input->post('livestemp'),
 				'score' => $this->input->post('scoretemp'),
 				'subject_name' => $this->input->post('subject_name'),
@@ -143,24 +145,40 @@ class SubjectController extends CI_Controller {
  		);
  
  		if($data['subject_name'] == "general_knowledge") {
+			$data['question_limit'] = unserialize($data['question_limit']);
+				if($data['question_limit'] == 5){
+ 					$this->load->view('game/limit_page');
+ 				}
 			$data['score'] = unserialize($data['score']);
 			$data['lives'] = unserialize($data['lives']);
 			$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
  			$this->load->view('game/general_knowledge', $data);
  		}
  		else if($data['subject_name'] == "mathematics") {
+			$data['question_limit'] = unserialize($data['question_limit']);
+				if($data['question_limit'] == 5){
+ 					$this->load->view('game/limit_page');
+ 				}
 			$data['score'] = unserialize($data['score']);
 			$data['lives'] = unserialize($data['lives']);
 			$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
 			$this->load->view('game/mathematics', $data);
  		}
  		else if($data['subject_name'] == "science") {
+			$data['question_limit'] = unserialize($data['question_limit']);
+				if($data['question_limit'] == 5){
+ 					$this->load->view('game/limit_page');
+ 				}
 			$data['score'] = unserialize($data['score']);
 			$data['lives'] = unserialize($data['lives']);
 			$data['science'] = unserialize(base64_decode($data['subject_array']));
 			$this->load->view('game/science', $data);
  		}
-		else {			
+		else {		
+			$data['question_limit'] = unserialize($data['question_limit']);
+				if($data['question_limit'] == 5){
+ 					$this->load->view('game/limit_page');
+ 				}
 			$data['score'] = unserialize($data['score']);
 			$data['lives'] = unserialize($data['lives']);
 			$data['english'] = unserialize(base64_decode($data['subject_array']));

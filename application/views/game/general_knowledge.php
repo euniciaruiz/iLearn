@@ -82,6 +82,7 @@
 			<p class="validateTips">The answer is correct!</p><br/>
 			<?php unset($general_knowledge[$rand]);?>
 			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="questionlimit" value="<?php echo serialize($question_limit + 1);?>" />
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score + 2);?>" />
 				<input type="hidden" name="subject_name" value="general_knowledge" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($general_knowledge));?>" />
@@ -96,6 +97,7 @@
 			<p class="validateTips">The answer is incorrect!</p><br/>
 			<?php unset($general_knowledge[$rand]);?>
 			<?php echo form_open('subjectController/next_question'); ?>
+				<input type="hidden" name="questionlimit" value="<?php echo serialize($question_limit + 1);?>" />
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score);?>" />
 				<input type="hidden" name="subject_name" value="general_knowledge" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($general_knowledge));?>" />
