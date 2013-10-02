@@ -85,7 +85,9 @@
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score + 2);?>" />
 				<input type="hidden" name="subject_name" value="general_knowledge" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($general_knowledge));?>" />
-				Your Score: <?php echo $score + 2;?>
+				<input type="hidden" name="livestemp" value="<?php echo serialize($lives);?>"/>
+				Your Score: <?php echo $score + 2;?><br>
+				Lives: <?php echo $lives;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
@@ -97,7 +99,9 @@
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score);?>" />
 				<input type="hidden" name="subject_name" value="general_knowledge" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($general_knowledge));?>" />
-				Your Score: <?php echo $score;?>
+				<input type="hidden" name="livestemp" value="<?php echo serialize($lives - 1);?>"/>
+				Your Score: <?php echo $score;?><br>
+				Lives: <?php echo $lives - 1;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>

@@ -26,7 +26,8 @@
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
-        </div>
+        </div><br><br>
+		
 		<?php $rand = array_rand($english); ?>
         <div class="hero-unit hero-unit-2">
           <p><?php echo $english[$rand][0];
@@ -83,9 +84,11 @@
 			<?php unset($english[$rand]);?>
 			<?php echo form_open('subjectController/next_question'); ?>
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score + 2);?>" />
+				<input type="hidden" name="livestemp" value="<?php echo serialize($lives);?>"/>
 				<input type="hidden" name="subject_name" value="english" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($english));?>" />
-				Your Score: <?php echo $score + 2;?>
+				Your Score: <?php echo $score + 2;?><br>
+				Lives: <?php echo $lives;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
@@ -96,7 +99,9 @@
 				<input type="hidden" name="scoretemp" value="<?php echo serialize($score);?>" />
 				<input type="hidden" name="subject_name" value="english" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($english));?>" />
-				Your Score: <?php echo $score;?>
+				<input type="hidden" name="livestemp" value="<?php echo serialize($lives - 1);?>"/>
+				Your Score: <?php echo $score;?><br>
+				Lives: <?php echo $lives - 1;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
