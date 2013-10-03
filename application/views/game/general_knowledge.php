@@ -9,37 +9,55 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap-responsive.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/common.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/fontawesome.css" type="text/css" media="screen" charset="utf-8" />
-	<link rel="stylesheet" href="<?php echo base_url();?>css/project.css" type="text/css" media="screen" charset="utf-8" />
-	<link rel="stylesheet" href="<?php echo base_url();?>css/main.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="<?php echo base_url();?>css/questions.css" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css" />
-    <script src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
-    <script src="<?php echo base_url();?>js/jquery-ui.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
 	<title>Interactive Learning Game</title>
-</head>
- <body>
+  <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <img src="<?php echo base_url();?>images/images-3.jpg" class="image image-1">
-		<i class="icon icon-home"></i>
-
-        <img src="<?php echo base_url(); ?>images/language_alphabet1.jpg" class="image image-2">
+        <img src="<?php echo base_url();?>images/earth.jpg" class="image image-1">
+        <img src="<?php echo base_url();?>images/movies.jpg" class="image image-2">
+        <div class="rectangle rectangle-1">
+          <h1 class="heading">iLearn</h1>
+          <div class="paragraph paragraph-1 paragraph-3">
+            <p>Login</p>
+          </div>
+          <div class="paragraph paragraph-1 paragraph-2 paragraph-4">
+            <p>Signup</p>
+          </div>
+          <div class="paragraph paragraph-1 paragraph-2 paragraph-5">
+            <p>Home</p>
+          </div>
+          <div class="paragraph paragraph-6">
+            <p>Interactive Learning Game</p>
+          </div>
+        </div>
         <div class="hero-unit hero-unit-1">
           <h1 class="heading"></h1>
           <div class="btns"></div>
-        </div><br><br> <font size="20"> <b> Lives: <?php echo $lives;?> </b> </font> 
-		<?php $rand = array_rand($general_knowledge); ?>
+        </div>
+        <div class="paragraph paragraph-7 paragraph-8">
+          <p>Score: <?php echo $score;?></p>
+        </div>
+        <div class="paragraph paragraph-7 paragraph-9">
+          <p>Lives: <?php echo $lives;?></p>
+        </div>
         <div class="hero-unit hero-unit-2">
-          <p><?php echo $general_knowledge[$rand][0];
-			?></p>
+          <?php $rand = array_rand($general_knowledge); ?>
+          <p><?php echo $general_knowledge[$rand][0];?></p>
           <div class="btns"></div>
         </div>
-		
-        <button class="btn btn-1 btn-2"  value="<?php echo $general_knowledge[$rand][1][0]; ?>"><?php echo $general_knowledge[$rand][1][0]; ?></button>
-        <button class="btn btn-1 btn-3"  value="<?php echo $general_knowledge[$rand][1][1]; ?>"><?php echo $general_knowledge[$rand][1][1]; ?></button>
-        <button class="btn btn-2 btn-4"  value="<?php echo $general_knowledge[$rand][1][2]; ?>"><?php echo $general_knowledge[$rand][1][2]; ?></button>
-        <button class="btn btn-3 btn-4"  value="<?php echo $general_knowledge[$rand][1][3]; ?>"><?php echo $general_knowledge[$rand][1][3]; ?></button>
-
-		<script>
+        <button class="btn btn-1 btn-2 btn-4"  value="<?php echo $general_knowledge[$rand][1][0]; ?>"><?php echo $general_knowledge[$rand][1][0]; ?></button>
+        <button class="btn btn-1 btn-5"  value="<?php echo $general_knowledge[$rand][1][1]; ?>"><?php echo $general_knowledge[$rand][1][1]; ?></button>
+        <img src="<?php echo base_url();?>images/images-4.jpg" class="image image-3">
+        <button class="btn btn-3 btn-6"  value="<?php echo $general_knowledge[$rand][1][2]; ?>"><?php echo $general_knowledge[$rand][1][2]; ?></button>
+        <button class="btn btn-2 btn-3"  value="<?php echo $general_knowledge[$rand][1][3]; ?>"><?php echo $general_knowledge[$rand][1][3]; ?></button>
+        <div class="rectangle rectangle-2"></div>
+      </div>
+    </div>
+    <script>
 			var correctAnswer = '<?php echo $general_knowledge[$rand][2]; ?>';
 
 			$( document ).ready(function() {
@@ -107,9 +125,8 @@
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
-      </div>
-    </div>
   </body>
+
 </html>
 
 

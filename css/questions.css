@@ -1,0 +1,246 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 1364px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 705px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 1364px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .image {
+   position: absolute;
+ }
+ #absolute-wrapper .image.image-1 {
+   width: 525px;
+   height: 529px;
+   top: -26px;
+   left: -91px;
+ }
+ #absolute-wrapper .image.image-2 {
+   width: 552px;
+   height: 484px;
+   top: 89px;
+   left: 812px;
+ }
+  #absolute-wrapper .image.image-3 {
+   width: 274px;
+   height: 184px;
+   top: 489px;
+   left: 24px;
+ }
+  #absolute-wrapper .image.image-4 {
+   width: 431px;
+   height: 532px;
+   top: 121px;
+   left: 945px;
+ }
+  #absolute-wrapper .image.image-5 {
+   width: 234px;
+   height: 215px;
+   top: 448px;
+   left: 35px;
+ }
+  #absolute-wrapper .image.image-6 {
+   width: 347px;
+   height: 364px;
+   top: 295px;
+   left: -67px;
+ }
+  #absolute-wrapper .image.image-7 {
+   width: 311px;
+   height: 143px;
+   top: 522px;
+   left: 1071px;
+ }
+  #absolute-wrapper .image.image-8 {
+   width: 540px;
+   height: 538px;
+   position: absolute;
+   top: 118px;
+   left: 820px;
+}
+ #absolute-wrapper .rectangle {
+   background: #000000;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+   border-radius: 0px;
+   border: none;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 {
+   width: 1375px;
+   height: 110px;
+   top: -1px;
+   left: -4px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .heading {
+   font-family:"oswald";
+   font-weight: normal;
+   font-size: 40pt;
+   color: #42beff;
+   width: 300px;
+   height: 42px;
+   position: absolute;
+   top: 23px;
+   left: 110px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph {
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1 {
+   top: 40px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-2 {
+   width: 70px;
+   height: 35px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-3 {
+   width: 71px;
+   height: 33px;
+   left: 1166px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-3 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-4 {
+   left: 1067px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-4 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-5 {
+   left: 976px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-5 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-6 {
+   width: 279px;
+   height: 29px;
+   top: 72px;
+   left: 111px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-6 p {
+   font-family:"droid sans";
+   font-size: 14pt;
+   color: #ffffff;
+   line-height: 29px;
+ }
+ #absolute-wrapper .hero-unit {
+   position: absolute;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-1 {
+   background: #3b0f68;
+   width: 637px;
+   height: 365px;
+   top: 137px;
+   left: 305px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7 {
+   position: absolute;
+ }
+ #absolute-wrapper .paragraph.paragraph-8 {
+   width: 145px;
+   height: 35px;
+   top: 171px;
+   left: 509px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-8 p {
+   font-family:"spinnaker";
+   font-weight: bold;
+   font-size: 30px;
+   color: #ff0000;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-9 {
+   width: 123px;
+   height: 32px;
+   top: 172px;
+   left: 357px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-9 p {
+   font-family:"spinnaker";
+   font-weight: bold;
+   font-size: 30px;
+   color: #b9ff00;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-2 {
+   background: #ffffff;
+   width: 528px;
+   height: 106px;
+   top: 230px;
+   left: 361px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-2 p {
+   font-family:"limelight";
+   font-size: 20px;
+   color: #000000;
+ }
+ #absolute-wrapper .btn {
+   background: #3ccbf7;
+   font-family:"limelight";
+   font-size: 17px;
+   width: 209px;
+   height: 51px;
+   position: absolute;
+ }
+ #absolute-wrapper .btn.btn-1 {
+   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.980392);
+ }
+ #absolute-wrapper .btn.btn-2 {
+   left: 454px;
+ }
+ #absolute-wrapper .btn.btn-3 {
+   -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), -1px 2px 2px 0px rgba(0, 0, 0, 0.992157);
+ }
+ #absolute-wrapper .btn.btn-4 {
+   top: 475px;
+ }
+ #absolute-wrapper .btn-1.btn-5 {
+   top: 476px;
+   left: 715px;
+ }
+ #absolute-wrapper .btn-3.btn-6 {
+   top: 543px;
+   left: 716px;
+ }
+ #absolute-wrapper .btn-2.btn-3 {
+   top: 544px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2 {
+   width: 1383px;
+   height: 46px;
+   top: 662px;
+   left: -12px;
+ }
