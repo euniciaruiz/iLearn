@@ -28,5 +28,21 @@ class PlayerController extends CI_Controller {
 			$this->index();
 		}
 	}
+	
+	public function game_statistics($date) {
+		$FC = new FusionCharts();
+
+		$strParam="caption=Game Statistics;subcaption=[".$date."];xAxisName=Subject;yAxisName=Score;decimalPrecision=0";
+		$FC->setChartParams($strParam);
+
+ 		$this->load->model('playerStatistics');
+		$query = $this->playerStatistics->getPlayerStatistics($date);
+
+		foreach ($query as $key) {
+			$FC->addChartData($key['score'], "name=".$key['subject']);
+		}
+		
+		print $FC->getXML();
+	}
 }
 ?>
