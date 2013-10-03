@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/iln/';
+$config['base_url']	= 'http://localhost/iLearn/';
 
 /*
 |--------------------------------------------------------------------------
