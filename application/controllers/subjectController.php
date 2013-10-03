@@ -156,9 +156,13 @@ class SubjectController extends CI_Controller {
  				else{
  					$data['score'] = unserialize($data['score']);
 					$data['lives'] = unserialize($data['lives']);
-					
-					$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
-					$this->load->view('game/general_knowledge', $data);
+					if($data['lives'] > 0){
+						$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
+						$this->load->view('game/general_knowledge', $data);
+					}
+					else{
+						$this->load->view('mainmenu/game_over');
+					}
  				}
  		}
  		else if($data['subject_name'] == "mathematics") {
@@ -169,8 +173,12 @@ class SubjectController extends CI_Controller {
  				else{
  					$data['score'] = unserialize($data['score']);
 					$data['lives'] = unserialize($data['lives']);
-					$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
-					$this->load->view('game/mathematics', $data);
+					if($data['lives'] > 0){
+						$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
+						$this->load->view('game/mathematics', $data);}
+					else{
+						$this->load->view('mainmenu/game_over');
+					}
  				}
  		}
  		else if($data['subject_name'] == "science") {
@@ -181,8 +189,12 @@ class SubjectController extends CI_Controller {
  				else{
  					$data['score'] = unserialize($data['score']);
 					$data['lives'] = unserialize($data['lives']);
-					$data['science'] = unserialize(base64_decode($data['subject_array']));
-					$this->load->view('game/science', $data);
+					if($data['lives'] > 0){
+						$data['science'] = unserialize(base64_decode($data['subject_array']));
+						$this->load->view('game/science', $data);}
+					else{
+						$this->load->view('mainmenu/game_over');
+					}
  				}
  		}
 		else {		
@@ -193,8 +205,12 @@ class SubjectController extends CI_Controller {
  				else{
  					$data['score'] = unserialize($data['score']);
 					$data['lives'] = unserialize($data['lives']);
-					$data['english'] = unserialize(base64_decode($data['subject_array']));
-					$this->load->view('game/english', $data);
+					if($data['lives'] > 0){
+						$data['english'] = unserialize(base64_decode($data['subject_array']));
+						$this->load->view('game/english', $data);}
+					else{
+						$this->load->view('mainmenu/game_over');
+					}
  				}
  		}
  	}

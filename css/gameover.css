@@ -1,0 +1,78 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 980px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 1000px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ /* Set floating dom-heading margins to 0 */
+ [class*="dom-heading"] {
+   margin: 0;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 980px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .image {
+   width: 236px;
+   height: 308px;
+   position: absolute;
+   top: 156px;
+   left: 402px;
+ }
+ #absolute-wrapper .rectangle {
+   background: #000000;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+   border-radius: 0px;
+   border: none;
+   width: 556px;
+   height: 179px;
+   position: absolute;
+   top: 484px;
+   left: 229px;
+ }
+ #absolute-wrapper .rectangle .btn {
+   font-family:"verdana";
+   font-size: 12px;
+   color: #00000;
+   background: #8498e0;
+   background-image: -moz-linear-gradient(270deg, #8498e0 0%, #e6e6e6 100%);
+   background-image: -webkit-linear-gradient(270deg, #8498e0 0%, #e6e6e6 100%);
+   background-image: -o-linear-gradient(270deg, #8498e0 0%, #e6e6e6 100%);
+   background-image: linear-gradient(180deg, #8498e0 0%, #e6e6e6 100%);
+   width: 364px;
+   height: 41px;
+   position: absolute;
+   top: 116px;
+   left: 98px;
+ }
+ #absolute-wrapper .dom-heading {
+   background: transparent;
+   font-family:"sansita one";
+   text-align: center;
+   color: #fffdfd;
+   width: 643px;
+   height: 42px;
+   position: absolute;
+   top: 508px;
+   left: 194px;
+ }

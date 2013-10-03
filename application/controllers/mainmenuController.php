@@ -12,7 +12,9 @@ class MainmenuController extends CI_Controller {
 		$data['query'] = $this->player->getPlayerList();
 		$this->load->view('mainMenu/home', $data);
 	}
-	
+	function home() {
+		$this->load->view('mainMenu/home');
+	}
 	function create()
 	{
 		$this->form_validation->set_rules('name', 'Name', 'trim|required|is_unique[player.name]|xss_clean');
