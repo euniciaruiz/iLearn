@@ -7,31 +7,8 @@ class MainmenuController extends CI_Controller {
 	}
 	
 	public function index()
-	{	
-		$this->load->model('player');
-		$data['query'] = $this->player->getPlayerList();
-		$this->load->view('mainMenu/home', $data);
-	}
-	function home() {
-		$this->load->view('mainMenu/home');
-	}
-	function create()
 	{
-		$this->form_validation->set_rules('name', 'Name', 'trim|required|is_unique[player.name]|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]|md5');
-		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->index();
-		}
-		else {
-			$data = array(
-				'name' => $this->input->post('name'),
-				'password' => $this->input->post('password')
-			);
-			$this->player->addPlayer($data);
-			$this->index();
-		}
+		$this->load->view('mainMenu/home');
 	}
 	
 	function help()

@@ -1,0 +1,213 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 1364px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 705px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 1364px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .rectangle {
+   background: #000000;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+   border-radius: 0px;
+   border: none;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 {
+   width: 1375px;
+   height: 110px;
+   top: -1px;
+   left: -4px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .heading {
+   font-family:"oswald";
+   font-weight: normal;
+   font-size: 40pt;
+   color: #42beff;
+   width: 300px;
+   height: 40px;
+   position: absolute;
+   top: 23px;
+   left: 110px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1 {
+   width: 71px;
+   top: 40px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph {
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-2 {
+   height: 36px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-3 {
+   height: 33px;
+   left: 1166px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-3 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-4 {
+   left: 1067px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-4 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-5 {
+   left: 976px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-1.paragraph-2.paragraph-5 p {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-6 {
+   width: 280px;
+   height: 29px;
+   top: 72px;
+   left: 111px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph.paragraph-6 p {
+   font-family:"droid sans";
+   font-size: 14pt;
+   color: #ffffff;
+   line-height: 29px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-1 {
+   border-radius: 0px;
+ }
+ #absolute-wrapper .hero-unit {
+   position: absolute;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-2 {
+   background: #7e7d7f;
+   width: 1254px;
+   height: 433px;
+   top: 109px;
+   left: -1px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-1.hero-unit-3 {
+   -moz-box-shadow: 0px 0px 10px 0px rgba(9, 7, 7, 0.843137);
+   -webkit-box-shadow: 0px 0px 10px 0px rgba(9, 7, 7, 0.843137);
+   -o-box-shadow: 0px 0px 10px 0px rgba(9, 7, 7, 0.843137);
+   box-shadow: 0px 0px 10px 0px rgba(9, 7, 7, 0.843137);
+   background: #6884b3;
+   width: 303px;
+   height: 328px;
+   top: 174px;
+   left: 479px;
+ }
+ #absolute-wrapper .hero-unit.hero-unit-4 {
+   border-radius: 6px;
+   background: #000000;
+   width: 233px;
+   height: 212px;
+   top: 269px;
+   left: 516px;
+ }
+ #absolute-wrapper .heading.heading-1 {
+   font-size: 40pt;
+   position: absolute;
+ }
+ #absolute-wrapper .heading.heading-2 {
+   font-family:"proxima-nova";
+   text-shadow: 3px 4px 8px #000000;
+   color: #ffffff;
+   width: 259px;
+   height: 69px;
+   top: 210px;
+   left: 606px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7 {
+   position: absolute;
+ }
+ #absolute-wrapper .paragraph.paragraph-8 {
+   width: 120px;
+   height: 18px;
+   top: 311px;
+   left: 566px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-8 p {
+   font-size: 15pt;
+   color: #ffffff;
+   line-height: 29px;
+   font-family:"ff-meta-serif-web-pro";
+ }
+ #absolute-wrapper input.textinput {
+   position: absolute;
+ }
+ #absolute-wrapper input.textinput.textinput-1 {
+   border-radius: 6px;
+   width: 240.79861068725586px;
+   height: 25.791666507720947px;
+   top: 349px;
+   left: 566px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-9 {
+   width: 174px;
+   height: 24px;
+   top: 422px;
+   left: 568px;
+ }
+ #absolute-wrapper .paragraph.paragraph-7.paragraph-9 p {
+   color: #ffffff;
+   line-height: 29px;
+   font-family:"ff-meta-serif-web-pro";
+   font-size: 15pt;
+ }
+ #absolute-wrapper input.textinput.textinput-2 {
+   width: 239.79861068725586px;
+   height: 27.791666507720947px;
+   top: 458px;
+   left: 567px;
+ }
+ #absolute-wrapper .btn {
+   font-family:"ff-meta-serif-web-pro";
+   font-weight: bold;
+   font-size: 17px;
+   position: absolute;
+ }
+ #absolute-wrapper .btn.btn-1 {
+   width: 102px;
+   height: 39px;
+   top: 530px;
+   left: 709px;
+ }
+ #absolute-wrapper .btn.btn-2 {
+   width: 103px;
+   height: 37px;
+   top: 532px;
+   left: 577px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2 {
+   width: 1383px;
+   height: 46px;
+   top: 662px;
+   left: -12px;
+ }

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<?php
+	session_start();
+	$username = $this->session->userdata('username');
+	$is_logged_in = $this->session->userdata('is_logged_in');
+?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -9,9 +13,11 @@
 	    	<link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
 	    	<link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
 	    	<link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
-	    	<link href="<?php echo base_url();?>css/home.css" media="screen" rel="stylesheet" type="text/css" />	
+	    	<link href="<?php echo base_url();?>css/home.css" media="screen" rel="stylesheet" type="text/css" />
+	    	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/component.css" />
+	    	<script src="<?php echo base_url();?>js/modernizr.custom.js"></script>		
 	</head>
-	<body>
+<body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
         <div class="image">
@@ -24,15 +30,21 @@
         </div>
         <div class="rectangle rectangle-1">
           <h1 class="heading">iLearn</h1>
-          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
-            <p>Signup</p>
-          </div>
-          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-4">
-            <p>Login</p>
-          </div>
-          <div class="dom-body-text paragraph paragraph-1 paragraph-5">
-            <p>Home</p>
-          </div>
+          <?php if($is_logged_in) { ?>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/logout', 'Logout'); ?></p>
+	        </div>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-5">
+	            <p>Welcome, <?php echo $username;?></p>
+	        </div>
+		   <?php } else { ?>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/signup', 'Signup'); ?></p>
+	          </div>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-4">
+	            <p><?php echo anchor('playerController/login', 'Login'); ?></p>
+	          </div>
+	       	<?php }; ?>
           <div class="dom-body-text paragraph paragraph-6">
             <p>Interactive Learning Game</p>
           </div>

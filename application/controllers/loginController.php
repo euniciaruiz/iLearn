@@ -25,7 +25,7 @@ class LoginController extends CI_Controller {
 	function logout()  
 	{  
 	    $this->session->sess_destroy();  
-	    $this->index();
+	    $this->load->view('mainMenu');
 	}  
 
 }

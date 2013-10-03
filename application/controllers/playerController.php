@@ -10,6 +10,10 @@ class PlayerController extends CI_Controller {
 		$this->load->view('mainMenu/home');
 	}
 	
+	public function signup() {
+		$this->load->view('mainMenu/create');
+	}
+	
 	public function create()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[player.username]|xss_clean');
@@ -17,7 +21,7 @@ class PlayerController extends CI_Controller {
 		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->index();
+			$this->signup();
 		}
 		else {
 			$data = array(
@@ -25,9 +29,39 @@ class PlayerController extends CI_Controller {
 				'password' => $this->input->post('password')
 			);
 			$this->player->addPlayer($data);
-			$this->index();
+			$this->load->view('mainMenu/login');
 		}
 	}
+	
+	public function login() {
+		$this->load->view('mainMenu/login');
+	}
+	
+	function validate_credentials() {
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$this->load->model('player');
+		$query = $this->player->validate($username, $password);
+		
+		if($query) {
+			$data = array(
+				'username' => $this->input->post('username'),
+				'is_logged_in' => true
+			);
+
+			$this->session->set_userdata($data);
+			redirect('subjectController/play');
+		}
+		else {
+			$this->load->view('mainMenu/home');
+		}
+	}
+
+	function logout()  
+	{  
+	    $this->session->sess_destroy();  
+	    $this->index();
+	}  
 	
 	public function game_statistics($date) {
 		$FC = new FusionCharts();
