@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<?php
+	session_start();
+	$username = $this->session->userdata('username');
+	$is_logged_in = $this->session->userdata('is_logged_in');
+?>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -21,16 +25,22 @@
       <div id="absolute-wrapper">
         <div class="rectangle rectangle-1">
           <h1 class="heading">iLearn</h1>
-          <div class="paragraph paragraph-1 paragraph-3">
-            <p>Login</p>
-          </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-4">
-            <p>Signup</p>
-          </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-5">
-            <p>Home</p>
-          </div>
-          <div class="paragraph paragraph-6">
+          <?php if($is_logged_in) { ?>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/logout', 'Logout'); ?></p>
+	        </div>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-5">
+	            <p>Hello, <?php echo $username;?></p>
+	        </div>
+		   <?php } else { ?>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/signup', 'Signup'); ?></p>
+	          </div>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-4">
+	            <p><?php echo anchor('playerController/login', 'Login'); ?></p>
+	          </div>
+	       	<?php }; ?>
+          <div class="dom-body-text paragraph paragraph-6">
             <p>Interactive Learning Game</p>
           </div>
         </div>
@@ -39,12 +49,11 @@
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
-        
         <div class="paragraph paragraph-7 paragraph-8">
-          <p>Score: <?php echo $score;?></p>
+          <p>Score: 0</p>
         </div>
         <div class="paragraph paragraph-7 paragraph-9">
-          <p>Lives: <?php echo $lives;?></p>
+          <p>Lives: 3</p>
         </div>
         <div class="hero-unit hero-unit-2">
           <?php $rand = array_rand($mathematics); ?>

@@ -19,7 +19,7 @@ id serial,
 description varchar,
 answer varchar,
 subject_id int,
-difficulty_id int
+difficulty_id int,
 
 primary key(id),
 foreign key(subject_id) references subject(id),
