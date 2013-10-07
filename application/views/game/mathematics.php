@@ -49,11 +49,11 @@
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
-        <div class="paragraph paragraph-7 paragraph-8">
-          <p>Score: 0</p>
+       <div class="paragraph paragraph-7 paragraph-8">
+          <p>Score: <?php echo $score;?></p>
         </div>
         <div class="paragraph paragraph-7 paragraph-9">
-          <p>Lives: 3</p>
+          <p>Lives: <?php echo $lives;?></p>
         </div>
         <div class="hero-unit hero-unit-2">
           <?php $rand = array_rand($mathematics); ?>
@@ -115,8 +115,6 @@
 				<input type="hidden" name="subject_name" value="mathematics" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($mathematics));?>" />
 				<input type="hidden" name="livestemp" value="<?php echo serialize($lives);?>"/>
-				Your Score: <?php echo $score + 2;?><br>
-				Lives: <?php echo $lives;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
@@ -129,8 +127,6 @@
 				<input type="hidden" name="subject_name" value="mathematics" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($mathematics));?>" />
 				<input type="hidden" name="livestemp" value="<?php echo serialize($lives - 1);?>"/>
-				Your Score: <?php echo $score;?><br>
-				Lives: <?php echo $lives - 1;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>

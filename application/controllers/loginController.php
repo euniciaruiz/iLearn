@@ -15,7 +15,7 @@ class LoginController extends CI_Controller {
 			);
 
 			$this->session->set_userdata($data);
-			redirect('subjectController/play');
+			redirect('mainmenuController');
 		}
 		else {
 			$this->load->view('mainMenu/home');

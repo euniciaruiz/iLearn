@@ -18,7 +18,6 @@ class PlayerController extends CI_Controller {
 			die();
 		}
 	}
-
 	public function index() {
 		$this->load->view('mainMenu/home');
 	}

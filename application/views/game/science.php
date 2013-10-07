@@ -114,8 +114,6 @@
 				<input type="hidden" name="subject_name" value="science" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
 				<input type="hidden" name="livestemp" value="<?php echo serialize($lives);?>"/>
-				Your Score: <?php echo $score + 2;?><br>
-				Lives: <?php echo $lives;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
@@ -128,8 +126,6 @@
 				<input type="hidden" name="subject_name" value="science" />
 				<input type="hidden" name="subject" value="<?php echo base64_encode(serialize($science));?>" />
 				<input type="hidden" name="livestemp" value="<?php echo serialize($lives - 1);?>"/>
-				Your Score: <?php echo $score;?><br>
-				Lives: <?php echo $lives - 1;?>
 				<button>Next Question</button>
 			<?php echo form_close(); ?>
 		</div>
