@@ -5,7 +5,6 @@ class PlayerController extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Player', 'player', TRUE);
 	}
-
 	public function index() {
 		$this->load->view('mainMenu/home');
 	}

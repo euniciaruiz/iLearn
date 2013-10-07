@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<?php
+	session_start();
+	$username = $this->session->userdata('username');
+	$is_logged_in = $this->session->userdata('is_logged_in');
+?>
 <html lang="en">
   
   <head>
@@ -21,22 +26,23 @@
     <div id="page-wrapper">
       <div id="absolute-wrapper">
         <div class="rectangle rectangle-1">
-          <h1 class="heading heading-1">iLearn</h1>
-          <div class="paragraph paragraph-1 paragraph-3">
-            <p>Login</p>
-          </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-4">
-            <p>Signup</p>
-          </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-5">
-            <p>Home</p>
-          </div>
-          <div class="container">
-            <div class="row-fluid">
-              <span class="span12"></span>
-            </div>
-          </div>
-          <div class="paragraph paragraph-6">
+          <h1 class="heading">iLearn</h1>
+          <?php if($is_logged_in) { ?>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/logout', 'Logout'); ?></p>
+	        </div>
+	        <div class="dom-body-text paragraph paragraph-1 paragraph-2">
+	            <p>Hello, <?php echo $username;?></p>
+	        </div>
+		   <?php } else { ?>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
+	            <p><?php echo anchor('playerController/signup', 'Signup'); ?></p>
+	          </div>
+	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-4">
+	            <p><?php echo anchor('playerController/login', 'Login'); ?></p>
+	          </div>
+	       	<?php }; ?>
+          <div class="dom-body-text paragraph paragraph-6">
             <p>Interactive Learning Game</p>
           </div>
         </div>
