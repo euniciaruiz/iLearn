@@ -4,7 +4,7 @@
  }
  #page-wrapper {
    position: relative;
-   width: 980px;
+   width: 1364px;
    /* centers the document */
    margin: 0 auto;
    /*
@@ -12,7 +12,7 @@
   remove overflow and height to see things drawn off canvas.
   */
    overflow: hidden;
-   height: 1000px;
+   height: 705px;
  }
  /* This makes absolutely positioned elements like p, h1,
      and some bootstrap elements placed properly. */
@@ -21,80 +21,168 @@
  }
  #absolute-wrapper {
    position: relative;
-   width: 980px;
+   width: 1364px;
    margin: 0 auto;
    height: 1px;
+ }
+ #absolute-wrapper .rectangle {
+   background: #000000;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+   border-radius: 0px;
+   border: none;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 {
+   width: 1378px;
+   height: 110px;
+   top: 0px;
+   left: -2px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .heading {
+   font-family:"oswald";
+   font-weight: normal;
+   font-size: 40pt;
+   color: #42beff;
+   width: 269px;
+   height: 49px;
+   position: absolute;
+   top: 26px;
+   left: 108px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse {
+   width: 406px;
+   height: 48px;
+   position: absolute;
+   top: 36px;
+   left: 909px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse .navbar-inner {
+   background: #000000;
+   border-radius: 0px;
+   border: 1px solid #000000;
+   height: 48px;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse .responsive-container .nav-collapse.collapse .nav li a {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #fff275;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph {
+   width: 279px;
+   height: 29px;
+   position: absolute;
+   top: 71px;
+   left: 109px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 .paragraph p {
+   font-family:"droid sans";
+   font-size: 14pt;
+   color: #ffffff;
+   line-height: 29px;
+ }
+ #absolute-wrapper .image.image-1 {
+   height: 168px;
  }
  #absolute-wrapper .image {
    position: absolute;
  }
- #absolute-wrapper .image.image-1 {
-   width: 529px;
-   height: 483px;
-   top: 123px;
-   left: 257px;
+ #absolute-wrapper .image.image-2 {
+   width: 869px;
+   top: 182px;
+   left: -3px;
+ }
+ #absolute-wrapper .image.image-1.image-3 {
+   width: 885px;
+   top: 426px;
+   left: 480px;
+ }
+ #absolute-wrapper .image.image-4 {
+   width: 581px;
+   height: 590px;
+   top: 110px;
+   left: 399px;
    background: transparent url(../images/vector-seamless-pattern-cute-bright-owls-26196062.jpg) top left no-repeat;
    background-size: 100% 100%;
  }
- #absolute-wrapper .image.image-1 .btn.btn-1 {
-   width: 214px;
-   height: 50px;
- }
- #absolute-wrapper .image.image-1 .btn {
+ #absolute-wrapper .image.image-4 .btn {
+   text-shadow: none;
+   font-family:"federo";
+   font-weight: bold;
+   border-radius: 2px;
+   font-size: 20px;
+   color: #ffffff;
+   width: 311px;
+   height: 66px;
    position: absolute;
  }
- #absolute-wrapper .image.image-1 .btn.btn-2 {
-   color: #000000;
+ #absolute-wrapper .image.image-4 .btn.btn-1 {
+   border: 1px solid rgba(0, 0, 0, 0.0980392);
  }
- #absolute-wrapper .image.image-1 .btn.btn-3 {
-   left: 152px;
+ #absolute-wrapper .image.image-4 .btn.btn-2 {
+   -moz-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 2px 10px 0px rgba(0, 0, 0, 0.882353);
+   -webkit-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 2px 10px 0px rgba(0, 0, 0, 0.882353);
+   -o-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 2px 10px 0px rgba(0, 0, 0, 0.882353);
+   box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 2px 10px 0px rgba(0, 0, 0, 0.882353);
  }
- #absolute-wrapper .image.image-1 .btn.btn-4 {
-   width: 216px;
+ #absolute-wrapper .image.image-4 .btn.btn-3 {
+   left: 144px;
  }
- #absolute-wrapper .image.image-1 .btn.btn-5 {
-   color: #f3c9c9;
-   background: #7fd5f4;
-   background-image: -moz-linear-gradient(270deg, #7fd5f4 52%, #535050 100%);
-   background-image: -webkit-linear-gradient(270deg, #7fd5f4 52%, #535050 100%);
-   background-image: -o-linear-gradient(270deg, #7fd5f4 52%, #535050 100%);
-   background-image: linear-gradient(180deg, #7fd5f4 52%, #535050 100%);
-   top: 54px;
-   left: 154px;
+ #absolute-wrapper .image.image-4 .btn.btn-4 {
+   background: #1f48a7;
+   background-image: -moz-linear-gradient(270deg, #1f48a7 0%, #253353 100%);
+   background-image: -webkit-linear-gradient(270deg, #1f48a7 0%, #253353 100%);
+   background-image: -o-linear-gradient(270deg, #1f48a7 0%, #253353 100%);
+   background-image: linear-gradient(180deg, #1f48a7 0%, #253353 100%);
+   top: 107px;
  }
- #absolute-wrapper .image.image-1 .btn-1.btn-5 strong span {
-   color: #000000;
+ #absolute-wrapper .image.image-4 .btn-1.btn-2.btn-5 {
+   background: #2e9021;
+   background-image: -moz-linear-gradient(270deg, #2e9021 0%, #174710 100%);
+   background-image: -webkit-linear-gradient(270deg, #2e9021 0%, #174710 100%);
+   background-image: -o-linear-gradient(270deg, #2e9021 0%, #174710 100%);
+   background-image: linear-gradient(180deg, #2e9021 0%, #174710 100%);
+   top: 196px;
+   left: 143px;
  }
- #absolute-wrapper .image.image-1 .btn-1.btn-2.btn-3 {
-   background: #4cd12f;
-   background-image: -moz-linear-gradient(270deg, #4cd12f 0%, #827b7b 100%);
-   background-image: -webkit-linear-gradient(270deg, #4cd12f 0%, #827b7b 100%);
-   background-image: -o-linear-gradient(270deg, #4cd12f 0%, #827b7b 100%);
-   background-image: linear-gradient(180deg, #4cd12f 0%, #827b7b 100%);
-   top: 126px;
+ #absolute-wrapper .image.image-4 .btn-2.btn-3.btn-6 {
+   background: #c131ae;
+   background-image: -moz-linear-gradient(270deg, #c131ae 0%, #793770 100%);
+   background-image: -webkit-linear-gradient(270deg, #c131ae 0%, #793770 100%);
+   background-image: -o-linear-gradient(270deg, #c131ae 0%, #793770 100%);
+   background-image: linear-gradient(180deg, #c131ae 0%, #793770 100%);
+   top: 287px;
  }
- #absolute-wrapper .image.image-1 .btn-2.btn-3.btn-4 {
-   background: #8f51fc;
-   background-image: -moz-linear-gradient(270deg, #8f51fc 0%, #808080 98%);
-   background-image: -webkit-linear-gradient(270deg, #8f51fc 0%, #808080 98%);
-   background-image: -o-linear-gradient(270deg, #8f51fc 0%, #808080 98%);
-   background-image: linear-gradient(180deg, #8f51fc 0%, #808080 98%);
-   height: 49px;
-   top: 200px;
+ #absolute-wrapper .image.image-4 .btn-3.btn-7 {
+   -moz-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 0px 10px 0px rgba(0, 0, 0, 0.882353);
+   -webkit-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 0px 10px 0px rgba(0, 0, 0, 0.882353);
+   -o-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 0px 10px 0px rgba(0, 0, 0, 0.882353);
+   box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.701961), 2px 0px 10px 0px rgba(0, 0, 0, 0.882353);
+   background: #ac2929;
+   background-image: -moz-linear-gradient(270deg, #ac2929 0%, #551515 100%);
+   background-image: -webkit-linear-gradient(270deg, #ac2929 0%, #551515 100%);
+   background-image: -o-linear-gradient(270deg, #ac2929 0%, #551515 100%);
+   background-image: linear-gradient(180deg, #ac2929 0%, #551515 100%);
+   top: 375px;
  }
- #absolute-wrapper .image.image-1 .btn-2.btn-4.btn-6 {
-   background: #f93c3c;
-   background-image: -moz-linear-gradient(270deg, #f93c3c 0%, #a7a7a7 100%);
-   background-image: -webkit-linear-gradient(270deg, #f93c3c 0%, #a7a7a7 100%);
-   background-image: -o-linear-gradient(270deg, #f93c3c 0%, #a7a7a7 100%);
-   background-image: linear-gradient(180deg, #f93c3c 0%, #a7a7a7 100%);
-   height: 51px;
-   top: 267px;
-   left: 151px;
+ #absolute-wrapper .rectangle.rectangle-2 {
+   width: 1383px;
+   height: 46px;
+   top: 660px;
+   left: -13px;
  }
- #absolute-wrapper .image.image-2 {
-   width: 543px;
-   height: 93px;
-   top: 31px;
-   left: 251px;
+ #absolute-wrapper .rectangle.rectangle-2 .paragraph {
+   width: 200px;
+   height: 23px;
+   position: absolute;
+   top: 11px;
+   left: 591px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2 .paragraph p {
+   text-align: center;
+   color: #ffffff;
  }

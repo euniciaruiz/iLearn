@@ -1,0 +1,262 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 1364px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 705px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 1364px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 {
+   background: #0f5069;
+ }
+ #absolute-wrapper .rectangle.rectangle-2 {
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+ }
+ #absolute-wrapper .rectangle {
+   border-radius: 0px;
+   border: none;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-3 {
+   background: #000000;
+ }
+ #absolute-wrapper .rectangle.rectangle-4 {
+   width: 1398px;
+   height: 556px;
+   top: 104px;
+   left: -1px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 {
+   background: #ffffff;
+   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   -o-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   width: 632px;
+   height: 480px;
+   top: 38px;
+   left: 358px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph {
+   height: 30px;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1 {
+   left: 218px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2 {
+   left: 46px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-3 {
+   width: 322px;
+   top: 122px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-3 p {
+   font-family:"federo";
+   font-size: 10pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput {
+   width: 317.79861068725586px;
+   height: 38.79166650772095px;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput.textinput-1 {
+   top: 158px;
+   left: 215px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-4 {
+   width: 100px;
+   top: 168px;
+   left: 47px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-4 p {
+   font-family:"federo";
+   font-weight: bold;
+   font-size: 14pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-5 {
+   width: 328px;
+   top: 210px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-5 p {
+   font-family:"federo";
+   font-size: 10pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput.textinput-2 {
+   top: 245px;
+   left: 216px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2.paragraph-6 {
+   width: 101px;
+   top: 255px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2.paragraph-6 p {
+   font-family:"federo";
+   font-weight: bold;
+   font-size: 14pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-7 {
+   width: 329px;
+   top: 298px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-7 p {
+   font-family:"federo";
+   font-size: 10pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput.textinput-3 {
+   top: 332px;
+   left: 217px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2.paragraph-8 {
+   width: 173px;
+   top: 340px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2.paragraph-8 p {
+   font-family:"federo";
+   font-weight: bold;
+   font-size: 14pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .btn {
+   background: #fdd57b;
+   -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   -o-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   text-shadow: none;
+   font-family:"ff-meta-serif-web-pro";
+   font-weight: bold;
+   font-size: 15px;
+   color: #000000;
+   border-radius: 2px;
+   height: 40px;
+   position: absolute;
+   top: 412px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .btn.btn-1 {
+   width: 130px;
+   left: 398px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .btn.btn-2 {
+   width: 133px;
+   left: 245px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-1.rectangle-2 {
+   width: 330px;
+   height: 56px;
+   top: 65px;
+   left: 280px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-1.rectangle-2 .heading {
+   text-shadow: 3px 4px 8px #000000;
+   font-family:"federo";
+   font-weight: normal;
+   font-size: 28px;
+   text-align: center;
+   color: #ffffff;
+   width: 242px;
+   height: 39px;
+   position: absolute;
+   top: 6px;
+   left: 93px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 {
+   width: 1378px;
+   height: 110px;
+   top: 0px;
+   left: -2px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .heading {
+   font-family:"oswald";
+   font-weight: normal;
+   font-size: 40pt;
+   color: #42beff;
+   width: 269px;
+   height: 49px;
+   position: absolute;
+   top: 26px;
+   left: 108px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .navbar.navbar-inverse {
+   width: 357px;
+   height: 47px;
+   position: absolute;
+   top: 36px;
+   left: 909px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .navbar.navbar-inverse .navbar-inner {
+   background: #000000;
+   border-radius: 0px;
+   border: 1px solid #000000;
+   height: 47px;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .navbar.navbar-inverse .responsive-container .nav-collapse.collapse .nav li a {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #fff275;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .paragraph {
+   width: 279px;
+   height: 29px;
+   position: absolute;
+   top: 71px;
+   left: 109px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-6 .paragraph p {
+   font-family:"droid sans";
+   font-size: 14pt;
+   color: #ffffff;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 {
+   width: 1383px;
+   height: 46px;
+   top: 660px;
+   left: -13px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .paragraph {
+   width: 200px;
+   height: 23px;
+   position: absolute;
+   top: 11px;
+   left: 591px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .paragraph p {
+   text-align: center;
+   color: #ffffff;
+ }

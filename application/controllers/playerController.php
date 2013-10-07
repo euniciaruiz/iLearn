@@ -4,6 +4,19 @@ class PlayerController extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('Player', 'player', TRUE);
+		$this->load->library('FusionCharts');
+        $this->swfCharts  = base_url().'Charts/';
+	}
+
+	function is_logged_in()
+	{
+		$is_logged_in = $this->session->userdata('is_logged_in');
+
+		if(!isset($is_logged_in) || $is_logged_in != true)
+		{
+			echo 'You don\'t have permission to access this page. <a href="../playerController/login">Login</a>';
+			die();
+		}
 	}
 
 	public function index() {
@@ -17,7 +30,7 @@ class PlayerController extends CI_Controller {
 	public function create()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[player.username]|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]|md5');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]');
 		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
 		if ($this->form_validation->run() == FALSE)
 		{
@@ -26,7 +39,7 @@ class PlayerController extends CI_Controller {
 		else {
 			$data = array(
 				'username' => $this->input->post('username'),
-				'password' => $this->input->post('password')
+				'password' => md5($this->input->post('password'))
 			);
 			$this->player->addPlayer($data);
 			$this->load->view('mainMenu/login');
@@ -37,7 +50,7 @@ class PlayerController extends CI_Controller {
 		$this->load->view('mainMenu/login');
 	}
 	
-	function validate_credentials() {
+	public  function validate_credentials() {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$this->load->model('player');
@@ -50,32 +63,75 @@ class PlayerController extends CI_Controller {
 			);
 
 			$this->session->set_userdata($data);
-			redirect('subjectController/play');
+			redirect('mainMenuController');
 		}
 		else {
-			$this->load->view('mainMenu/home');
+			$this->session->set_flashdata('msg', 'Incorrect Username/Password Combination');
+			$this->login();
 		}
 	}
 
 	function logout()  
-	{  
-	    $this->session->sess_destroy();  
+	{
+		$this->is_logged_in();
+		$user_data = $this->session->all_userdata();
+        foreach ($user_data as $key => $value) {
+            if ($key != 'session_id' && $key != 'ip_address' && $key != 'user_agent' && $key != 'last_activity') {
+                $this->session->unset_userdata($key);
+            }
+        }
+	    $this->session->sess_destroy();
 	    $this->index();
 	}  
 	
+	public function player_profile() {
+		$this->is_logged_in();
+		$username = $this->session->userdata('username');
+		$data['query'] = $this->player->getPlayerData($username);
+		$this->load->view('player/profile', $data);
+	}
+
+	public function editUsername() {
+		$this->is_logged_in();
+		$username = $this->session->userdata('username');
+		$data['query'] = $this->player->getPlayerData($username);
+		$this->load->view('player/edit_username', $data);
+	}
+
+	public function editPassword() {
+		$this->is_logged_in();
+		$username = $this->session->userdata('username');
+		$data['query'] = $this->player->getPlayerData($username);
+		$this->load->view('player/edit_password', $data);
+	}
+
+	public function deleteAccount() {
+		//$this->is_logged_in();
+		$this->load->view('player/delete_account');
+	}
+
+	public function chart() {
+		$this->is_logged_in();
+		$this->load->view('game/chart');
+	}
+
 	public function game_statistics($date) {
+		$this->is_logged_in();
 		$FC = new FusionCharts();
 
 		$strParam="caption=Game Statistics;subcaption=[".$date."];xAxisName=Subject;yAxisName=Score;decimalPrecision=0";
 		$FC->setChartParams($strParam);
 
+		$player = $this->player->getPlayerData($this->session->userdata('username'));
+	
  		$this->load->model('playerStatistics');
-		$query = $this->playerStatistics->getPlayerStatistics($date);
+		$query = $this->playerStatistics->getGameStatistics($player[0]['id'], $date);
 
 		foreach ($query as $key) {
+
 			$FC->addChartData($key['score'], "name=".$key['subject']);
 		}
-		
+	
 		print $FC->getXML();
 	}
 }

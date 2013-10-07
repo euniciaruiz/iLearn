@@ -1,9 +1,13 @@
 <?php
 
 class SubjectController extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('Subject', 'subject', TRUE);
+	}
+
 	public function play()
 	{
-		$this->load->model('subject');
 		$data['query'] = $this->subject->getSubjectList();
 		$this->load->view('game/subjectList', $data);
 	}
@@ -140,6 +144,17 @@ class SubjectController extends CI_Controller {
 	}
 	
 	public function next_question() {
+		$this->load->model('playerStatistics');
+		$this->load->model('player');
+		$is_logged_in = $this->session->userdata('is_logged_in');
+
+		if(!isset($is_logged_in) || $is_logged_in != true)
+		{
+			$player = null;
+		}
+		else {
+			$player = $this->player->getPlayerData($this->session->userdata('username'));
+		};
  		$data = array(
 				'question_limit' => $this->input->post('questionlimit'),
 				'lives' => $this->input->post('livestemp'),
@@ -149,41 +164,88 @@ class SubjectController extends CI_Controller {
  		);
  
  		if($data['subject_name'] == "general_knowledge") {
+ 			$subject_id = 0;
 			$data['question_limit'] = unserialize($data['question_limit']);
-				if($data['question_limit'] == 5){
- 					$this->load->view('game/limit_page');
- 				}
- 				else{
- 					$data['score'] = unserialize($data['score']);
-					$data['lives'] = unserialize($data['lives']);
-					if($data['lives'] > 0){
-						$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
-						$this->load->view('game/general_knowledge', $data);
+
+			if($data['question_limit'] == 5){
+				if($player != null) {
+				$data = array(
+					'player_id' => $player[0]['id'],
+					'score' => unserialize($data['score']),
+					'subject'=> "General knowledge",
+					'date' => date('Y-m-d')
+				);
+				$this->playerStatistics->createPlayerStatistics($data);
+			}
+
+ 				$this->load->view('game/limit_page');
+ 			}
+ 			else{
+ 				$data['score'] = unserialize($data['score']);
+				$data['lives'] = unserialize($data['lives']);
+				if($data['lives'] > 0){
+					$data['general_knowledge'] = unserialize(base64_decode($data['subject_array']));
+					$this->load->view('game/general_knowledge', $data);
+				}
+				else{
+					if($player != null || $player != "") {
+						$data = array(
+							'player_id' => $player[0]['id'],
+							'score' => $data['score'],
+							'subject'=> "General knowledge",
+							'date' => date('Y-m-d')
+						);
+						$this->playerStatistics->createPlayerStatistics($data);
 					}
-					else{
-						$this->load->view('mainmenu/game_over');
-					}
- 				}
+
+					$this->load->view('mainmenu/game_over');
+				}
+ 			}
  		}
  		else if($data['subject_name'] == "mathematics") {
 			$data['question_limit'] = unserialize($data['question_limit']);
-				if($data['question_limit'] == 5){
- 					$this->load->view('game/limit_page');
- 				}
- 				else{
- 					$data['score'] = unserialize($data['score']);
-					$data['lives'] = unserialize($data['lives']);
-					if($data['lives'] > 0){
-						$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
-						$this->load->view('game/mathematics', $data);}
-					else{
-						$this->load->view('mainmenu/game_over');
-					}
- 				}
+				
+			if($data['question_limit'] == 5){
+				$data = array(
+					'player_id' => $player[0]['id'],
+					'score' => unserialize($data['score']),
+					'subject'=> "Mathematics",
+					'date' => date('Y-m-d')
+				);
+				$this->playerStatistics->createPlayerStatistics($data);
+
+ 				$this->load->view('game/limit_page');
+ 			}
+ 			else{
+ 				$data['score'] = unserialize($data['score']);
+				$data['lives'] = unserialize($data['lives']);
+				if($data['lives'] > 0){
+					$data['mathematics'] = unserialize(base64_decode($data['subject_array']));
+					$this->load->view('game/mathematics', $data);}
+				else{
+					$data = array(
+						'player_id' => $player[0]['id'],
+						'score' => unserialize($data['score']),
+						'subject'=> "Mathematics",
+						'date' => date('Y-m-d')
+					);
+					$this->playerStatistics->createPlayerStatistics($data);
+
+					$this->load->view('mainmenu/game_over');
+				}
+ 			}
  		}
  		else if($data['subject_name'] == "science") {
 			$data['question_limit'] = unserialize($data['question_limit']);
 				if($data['question_limit'] == 5){
+					$data = array(
+						'player_id' => $player[0]['id'],
+						'score' => unserialize($data['score']),
+						'subject'=> "Science",
+						'date' => date('Y-m-d')
+					);
+					$this->playerStatistics->createPlayerStatistics($data);
+
  					$this->load->view('game/limit_page');
  				}
  				else{
@@ -193,6 +255,14 @@ class SubjectController extends CI_Controller {
 						$data['science'] = unserialize(base64_decode($data['subject_array']));
 						$this->load->view('game/science', $data);}
 					else{
+						$data = array(
+							'player_id' => $player[0]['id'],
+							'score' => unserialize($data['score']),
+							'subject'=> "Science",
+							'date' => date('Y-m-d')
+						);
+						$this->playerStatistics->createPlayerStatistics($data);
+
 						$this->load->view('mainmenu/game_over');
 					}
  				}
@@ -200,6 +270,13 @@ class SubjectController extends CI_Controller {
 		else {		
 			$data['question_limit'] = unserialize($data['question_limit']);
 				if($data['question_limit'] == 5){
+					$data = array(
+						'player_id' => $player[0]['id'],
+						'score' => unserialize($data['score']),
+						'subject'=> "English",
+						'date' => date('Y-m-d')
+					);
+					$this->playerStatistics->createPlayerStatistics($data);
  					$this->load->view('game/limit_page');
  				}
  				else{
@@ -209,6 +286,14 @@ class SubjectController extends CI_Controller {
 						$data['english'] = unserialize(base64_decode($data['subject_array']));
 						$this->load->view('game/english', $data);}
 					else{
+						$data = array(
+							'player_id' => $player[0]['id'],
+							'score' => unserialize($data['score']),
+							'subject'=> "English",
+							'date' => date('Y-m-d')
+						);
+						$this->playerStatistics->createPlayerStatistics($data);
+
 						$this->load->view('mainmenu/game_over');
 					}
  				}

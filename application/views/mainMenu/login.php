@@ -1,77 +1,78 @@
 <!DOCTYPE HTML>
-<?php
-	session_start();
-	$username = $this->session->userdata('username');
-	$is_logged_in = $this->session->userdata('is_logged_in');
-?>
+
 <html lang="en">
-  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald:400,300,700" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/bootstrap2.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/bootstrap-responsive2.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/common2.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/fontawesome2.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/project2.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/copy-of-questions2.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
+    <link href="<?php echo base_url();?>css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url();?>css/login.css" media="screen" rel="stylesheet" type="text/css" />
     <title>Login</title>
   </head>
-  
   <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <div class="rectangle rectangle-1">
+        <div class="rectangle rectangle-1 rectangle-2 rectangle-4">
+          <div class="rectangle rectangle-5">
+            <?php echo form_open('playerController/validate_credentials');?>
+            <div class="paragraph paragraph-1 paragraph-2">
+              <?php if($this->session->flashdata('msg')){ ?>
+              <p><?php echo $this->session->flashdata('msg'); ?></p>
+              <?php } ?>
+            </div>
+            <input class="textinput textinput-1" type="text" name="username">
+            <div class="paragraph paragraph-3">
+              <p>Username</p>
+            </div>
+            <input class="textinput textinput-2" type="text" name="password">
+            <div class="paragraph paragraph-5">
+              <p>Password</p>
+            </div>
+            <button class="btn btn-1">Signup</button>
+            <?php echo form_close(); ?>
+            <?php echo form_open('mainmenuController');?>
+            <button class="btn btn-2">Cancel</button>
+            <?php echo form_close(); ?>
+          </div>
+          <div class="rectangle rectangle-1 rectangle-2">
+            <h1 class="heading">Login</h1>
+          </div>
+        </div>
+        <div class="rectangle rectangle-2 rectangle-3 rectangle-6">
           <h1 class="heading">iLearn</h1>
-          <?php if($is_logged_in) { ?>
-	        <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
-	            <p><?php echo anchor('playerController/logout', 'Logout'); ?></p>
-	        </div>
-	        <div class="dom-body-text paragraph paragraph-1 paragraph-2">
-	            <p>Hello, <?php echo $username;?></p>
-	        </div>
-		   <?php } else { ?>
-	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-3">
-	            <p><?php echo anchor('playerController/signup', 'Signup'); ?></p>
-	          </div>
-	          <div class="dom-body-text paragraph paragraph-1 paragraph-2 paragraph-4">
-	            <p><?php echo anchor('playerController/login', 'Login'); ?></p>
-	          </div>
-	       	<?php }; ?>
-          <div class="dom-body-text paragraph paragraph-6">
+          <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+              <div class="responsive-container">
+                <a class="btn btn-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                  <ul class="nav">
+                    <li>
+                      <?php echo anchor('mainmenuController', 'Home'); ?>
+                    </li>
+                    <li>
+                      <?php echo anchor('playerController/signup', 'Signup'); ?>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="paragraph">
             <p>Interactive Learning Game</p>
           </div>
         </div>
-        <div class="hero-unit hero-unit-1 hero-unit-2">
-          <h1 class="heading"></h1>
-          <div class="btns"></div>
+        <div class="rectangle rectangle-2 rectangle-3 rectangle-7">
+          <div class="paragraph">
+            <p>Copyright @</p>
+          </div>
         </div>
-        <div class="hero-unit hero-unit-1 hero-unit-3">
-          <h1 class="heading"></h1>
-          <div class="btns"></div>
-        </div>
-        <div class="hero-unit hero-unit-4">
-          <h1 class="heading"></h1>
-          <div class="btns"></div>
-        </div>
-		<?php echo form_open('loginController/validate_credentials');?>
-        <h1 class="heading heading-1 heading-2">LOGIN</h1>
-        <div class="paragraph paragraph-7 paragraph-8">
-          <p>Username:</p>
-        </div>
-        <input class="textinput textinput-1" type="text" name="username" value="<?php echo set_value('username'); ?>">
-        <div class="paragraph paragraph-7 paragraph-9">
-          <p>Password:</p>
-        </div>
-        <input class="textinput textinput-2" type="password" name="password" value="<?php echo set_value('password'); ?>">
-        <button class="btn btn-2">Login</button>
-		<?php echo form_close(); ?>
-		<button class="btn btn-1">Cancel</button>
-        <div class="rectangle rectangle-2"></div>
       </div>
     </div>
   </body>

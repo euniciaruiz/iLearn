@@ -1,8 +1,11 @@
 html {
   background-color: #ffffff;
-  background-image: url(../images/home-background.jpg);
+  background-image: url(../images/home_background.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body {
   padding-left: 0;
@@ -41,47 +44,37 @@ body {
   background: transparent url(../images/2.jpg) top left no-repeat;
   background-size: 100% 100%;
 }
-#absolute-wrapper .image .btn-success {
+#absolute-wrapper .image .btn-primary {
+  -moz-box-shadow: 2px 0px 10px 0px #000000;
+  -webkit-box-shadow: 2px 0px 10px 0px #000000;
+  -o-box-shadow: 2px 0px 10px 0px #000000;
+  box-shadow: 2px 0px 10px 0px #000000;
+  text-shadow: none;
+  font-family:"federo";
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+}
+#absolute-wrapper .image .btn-primary.btn-primary-1 {
   background: #bd7af5;
   background-image: -moz-linear-gradient(270deg, #bd7af5 0%, #1e2841 100%);
   background-image: -webkit-linear-gradient(270deg, #bd7af5 0%, #1e2841 100%);
   background-image: -o-linear-gradient(270deg, #bd7af5 0%, #1e2841 100%);
   background-image: linear-gradient(180deg, #bd7af5 0%, #1e2841 100%);
-  -moz-box-shadow: 2px 0px 10px 0px #000000;
-  -webkit-box-shadow: 2px 0px 10px 0px #000000;
-  -o-box-shadow: 2px 0px 10px 0px #000000;
-  box-shadow: 2px 0px 10px 0px #000000;
-  text-shadow: none;
-  font-family:"federo";
-  font-size: 30px;
-  color: #ffffff;
-  border-radius: 10px;
-  border: none;
-  width: 205px;
-  height: 55px;
-  position: absolute;
+  width: 201px;
+  height: 56px;
   top: 319px;
   left: 170px;
 }
-#absolute-wrapper .image .btn-primary {
+#absolute-wrapper .image .btn-primary.btn-primary-2 {
   background: #2becd4;
   background-image: -moz-linear-gradient(270deg, #2becd4 0%, #1e2841 100%);
   background-image: -webkit-linear-gradient(270deg, #2becd4 0%, #1e2841 100%);
   background-image: -o-linear-gradient(270deg, #2becd4 0%, #1e2841 100%);
   background-image: linear-gradient(180deg, #2becd4 0%, #1e2841 100%);
-  -moz-box-shadow: 2px 0px 10px 0px #000000;
-  -webkit-box-shadow: 2px 0px 10px 0px #000000;
-  -o-box-shadow: 2px 0px 10px 0px #000000;
-  box-shadow: 2px 0px 10px 0px #000000;
-  text-shadow: none;
-  font-family:"federo";
-  font-size: 30px;
-  color: #ffffff;
-  border-radius: 10px;
-  border: none;
   width: 205px;
   height: 55px;
-  position: absolute;
   top: 388px;
   left: 171px;
 }
@@ -112,57 +105,34 @@ body {
   top: 33px;
   left: 133px;
 }
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1 {
-  width: 104px;
-  height: 33px;
+#absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse {
+  width: 307px;
+  height: 47px;
+  position: absolute;
+  top: 49px;
+  left: 924px;
+}
+#absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse .navbar-inner {
+  background: #000000;
+  border-radius: 0px;
+  border: none;
+  height: 47px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#absolute-wrapper .rectangle.rectangle-1 .navbar.navbar-inverse .responsive-container .nav-collapse.collapse .nav li a {
+  color: #fff275;
+  font-family:"trebuchet ms";
+  font-size: 20px;
 }
 #absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph {
-  position: absolute;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-2 {
-  top: 54px;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-3 {
-  left: 1001px;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1.paragraph-2.paragraph-3 p {
-  font-family:"droid sans";
-  font-size: 14pt;
-  text-align: center;
-  color: #ffffff;
-  line-height: 29px;
-  font-weight: bold;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1.paragraph-2.paragraph-4 {
-  left: 1101px;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1.paragraph-2.paragraph-4 p {
-  font-family:"droid sans";
-  font-size: 14pt;
-  text-align: center;
-  color: #ffffff;
-  line-height: 29px;
-  font-weight: bold;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1.paragraph-5 {
-  top: 56px;
-  left: 894px;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-1.paragraph-5 p {
-  font-family:"droid sans";
-  font-size: 14pt;
-  text-align: center;
-  color: #ffffff;
-  line-height: 29px;
-  font-weight: bold;
-}
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-6 {
   width: 279px;
   height: 29px;
+  position: absolute;
   top: 78px;
-  left: 122px;
+  left: 118px;
 }
-#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph.paragraph-6 p {
+#absolute-wrapper .rectangle.rectangle-1 .dom-body-text.paragraph p {
   font-family:"droid sans";
   font-size: 14pt;
   text-align: center;

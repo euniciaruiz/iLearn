@@ -1,0 +1,209 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #page-wrapper {
+   position: relative;
+   width: 1364px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 705px;
+ }
+ /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+   margin-top: 0 !important;
+ }
+ #absolute-wrapper {
+   position: relative;
+   width: 1364px;
+   margin: 0 auto;
+   height: 1px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1 {
+   background: #0f5069;
+ }
+ #absolute-wrapper .rectangle.rectangle-2 {
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
+   box-shadow: none;
+ }
+ #absolute-wrapper .rectangle {
+   border-radius: 0px;
+   border: none;
+   position: absolute;
+ }
+ #absolute-wrapper .rectangle.rectangle-3 {
+   background: #000000;
+ }
+ #absolute-wrapper .rectangle.rectangle-4 {
+   width: 1398px;
+   height: 556px;
+   top: 104px;
+   left: -1px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 {
+   background: #ffffff;
+   -moz-box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   -webkit-box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   -o-box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.701961);
+   width: 442px;
+   height: 488px;
+   top: 38px;
+   left: 103px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph {
+   width: 338px;
+   height: 31px;
+   position: absolute;
+   top: 148px;
+   left: 56px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph p {
+   font-family:"federo";
+   font-size: 14pt;
+   color: #000000;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput {
+   width: 246.79861068725586px;
+   height: 20.791666507720947px;
+   position: absolute;
+   top: 215px;
+   left: 82px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .btn-primary {
+   background: #fdd57b;
+   -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   -o-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.882353);
+   text-shadow: none;
+   font-family:"ff-meta-serif-web-pro";
+   font-weight: bold;
+   font-size: 15px;
+   border-radius: 2px;
+   color: #000000;
+   width: 134px;
+   height: 40px;
+   position: absolute;
+   top: 266px;
+   left: 144px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-6 {
+   background: #d2acf9;
+   -moz-box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.701961);
+   -webkit-box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.701961);
+   -o-box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.701961);
+   box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.701961);
+   width: 757px;
+   height: 514px;
+   top: 25px;
+   left: 540px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-6 div {
+   width: 674px;
+   height: 439px;
+   position: absolute;
+   top: 38px;
+   left: 40px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-1.rectangle-2 {
+   width: 330px;
+   height: 56px;
+   top: 58px;
+   left: 35px;
+ }
+ #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-1.rectangle-2 .heading {
+   text-shadow: 3px 4px 8px #000000;
+   font-family:"federo";
+   font-weight: normal;
+   font-size: 28px;
+   text-align: center;
+   color: #ffffff;
+   width: 242px;
+   height: 39px;
+   position: absolute;
+   top: 9px;
+   left: 78px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 {
+   width: 1375px;
+   height: 110px;
+   top: 0px;
+   left: -2px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .heading {
+   font-family:"oswald";
+   font-weight: normal;
+   font-size: 40pt;
+   color: #42beff;
+   width: 267px;
+   height: 47px;
+   position: absolute;
+   top: 26px;
+   left: 108px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .navbar.navbar-inverse {
+   width: 406px;
+   height: 45px;
+   position: absolute;
+   top: 36px;
+   left: 909px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .navbar.navbar-inverse .navbar-inner {
+   background: #000000;
+   border-radius: 0px;
+   border: 1px solid #000000;
+   height: 45px;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .navbar.navbar-inverse .responsive-container .brand {
+   font-size: 25px;
+   font-weight: bold;
+   font-family:"trebuchet ms";
+   color: #ffffff;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .navbar.navbar-inverse .responsive-container .nav-collapse.collapse .nav li a {
+   font-family:"trebuchet ms";
+   font-size: 20px;
+   color: #fff275;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .paragraph {
+   width: 279px;
+   height: 29px;
+   position: absolute;
+   top: 71px;
+   left: 109px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-7 .paragraph p {
+   font-family:"droid sans";
+   font-size: 14pt;
+   color: #ffffff;
+   line-height: 29px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-8 {
+   width: 1383px;
+   height: 46px;
+   top: 660px;
+   left: -13px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-8 .paragraph {
+   width: 200px;
+   height: 23px;
+   position: absolute;
+   top: 11px;
+   left: 591px;
+ }
+ #absolute-wrapper .rectangle.rectangle-2.rectangle-3.rectangle-8 .paragraph p {
+   text-align: center;
+   color: #ffffff;
+ }

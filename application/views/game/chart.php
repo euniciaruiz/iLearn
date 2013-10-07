@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<?php
+  session_start();
+  $username = $this->session->userdata('username');
+  $is_logged_in = $this->session->userdata('is_logged_in');
+?>
 <html>
   <head>
     <title>Dynamic Graphs with JQuery and FusionCharts</title>
@@ -34,39 +40,59 @@
       });
     </script>
   </head>
-<body>
+ <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
-        <div class="hero-unit hero-unit-1">
-          <h1 class="heading"></h1>
-          <div class="btns"></div>
+        <div class="rectangle rectangle-1 rectangle-2 rectangle-4">
+          <div class="rectangle rectangle-5">
+            <div class="paragraph">
+              <p>Choose a&nbsp;date to view your game statistics.</p>
+            </div>
+            <input class="textinput" type="text" id="date" name="date" placeholder="Choose Date">
+            <button class="btn btn-primary" id="changeDate" name="changeDate">View Chart</button>
+          </div>
+          <div class="rectangle rectangle-6">
+            <div id="chart1div">This message will be replaced by the chart.</div>
+          </div>
+          <div class="rectangle rectangle-1 rectangle-2">
+            <h1 class="heading">Game Statistics</h1>
+          </div>
         </div>
-        <div class="rectangle rectangle-1">
+        <div class="rectangle rectangle-2 rectangle-3 rectangle-7">
           <h1 class="heading">iLearn</h1>
-          <div class="paragraph paragraph-1 paragraph-3 paragraph-7">
-            <p>Login</p>
+          <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+              <div class="responsive-container">
+                <a class="btn btn-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                  <ul class="nav">
+                    <li>
+                      <?php echo anchor('mainmenuController', 'Home'); ?>
+                    </li>
+                    <li>
+                      <?php echo anchor('playerController/player_profile', $username."'s Profile"); ?>
+                    </li>
+                    <li>
+                      <?php echo anchor('playerController/logout', 'Logout'); ?>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-4">
-            <p>Signup</p>
-          </div>
-          <div class="paragraph paragraph-1 paragraph-2 paragraph-5">
-            <p>Home</p>
-          </div>
-          <div class="paragraph paragraph-6">
+          <div class="paragraph">
             <p>Interactive Learning Game</p>
           </div>
         </div>
-        <div class="paragraph paragraph-7 paragraph-8 div-1">
-          <p>Choose a date to view your game statistics.</p>
+        <div class="rectangle rectangle-2 rectangle-3 rectangle-8">
+          <div class="paragraph">
+            <p>Copyright @</p>
+          </div>
         </div>
-        <input class="textinput" type="text" placeholder="Placeholder" name="date" id="date">
-        <button class="btn" id="changeDate" name="changeDate">View Chart</button>
-        <div class="hero-unit hero-unit-2">
-          <h1 class="heading"></h1>
-          <div class="btns"></div>
-        </div>
-        <div class="div-1 div-2" id="chart1div"></div>
-        <div class="rectangle rectangle-2"></div>
       </div>
     </div>
   </body>
