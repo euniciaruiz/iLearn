@@ -18,6 +18,7 @@ class PlayerController extends CI_Controller {
 			die();
 		}
 	}
+
 	public function index() {
 		$this->load->view('mainMenu/home');
 	}
@@ -97,11 +98,35 @@ class PlayerController extends CI_Controller {
 		$this->load->view('player/edit_username', $data);
 	}
 
+	public function updateUsername()
+	{
+		$data = array(
+			'id' => $this->input->post('id'),
+			'username' => $this->input->post('username'),
+			'password' => $this->input->post('password'),
+		);
+
+		$this->player->updatePlayer($data);
+		$this->index();
+	}
+
 	public function editPassword() {
 		$this->is_logged_in();
 		$username = $this->session->userdata('username');
 		$data['query'] = $this->player->getPlayerData($username);
 		$this->load->view('player/edit_password', $data);
+	}
+
+	public function updatePassword()
+	{
+		$data = array(
+			'id' => $this->input->post('id'),
+			'username' => $this->input->post('username'),
+			'password' => $this->input->post('password'),
+		);
+
+		$this->player->updatePlayer($data);
+		$this->index();
 	}
 
 	public function deleteAccount() {
