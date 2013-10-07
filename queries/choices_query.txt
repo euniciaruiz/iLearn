@@ -47,13 +47,13 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('Antidote', 5);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 5);
+VALUES ('Venom', 5);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 5);
+VALUES ('Solution', 5);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 5);
+VALUES ('Medicine', 5);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('An antonym', 6);
@@ -65,7 +65,7 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('A homonym', 6);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('A', 6);
+VALUES ('None of the three ', 6);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('A', 7);
@@ -92,7 +92,7 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('the letter r', 8);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 9);
+VALUES ('Home', 9);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Herd', 9);
@@ -176,13 +176,13 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('Students', 15);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 16);
+VALUES ('Buckingham Palace', 16);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 16);
+VALUES ('King's Landing Castle', 16);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 16);
+VALUES ('Scotland Castle', 16);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Edinburgh Castle', 16);
@@ -248,7 +248,7 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('The Cardinal', 21);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 22);
+VALUES ('Pieto', 22);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Ciao', 22);
@@ -293,7 +293,7 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('Medusa', 25);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 25);
+VALUES ('Venus', 25);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Red Sea', 26);
@@ -302,19 +302,19 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('River Styx', 26);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 26);
+VALUES ('Nile River', 26);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 26);
+VALUES ('Great River', 26);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 27);
+VALUES ('Flamingo', 27);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 27);
+VALUES ('Dove', 27);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 27);
+VALUES ('Parrot', 27);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Turkey', 27);
@@ -326,7 +326,7 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('Great Wall', 28);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 28);
+VALUES ('Parthenon', 28);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('Pyramid', 28);
@@ -380,13 +380,13 @@ INSERT INTO choice(choice_description, question_id)
 VALUES ('pentagon', 32);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 33);
+VALUES ('The ear', 33);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 33);
+VALUES ('The nose', 33);
 
 INSERT INTO choice(choice_description, question_id)
-VALUES ('', 33);
+VALUES ('The mouth', 33);
 
 INSERT INTO choice(choice_description, question_id)
 VALUES ('The eye', 33);
