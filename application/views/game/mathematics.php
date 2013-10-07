@@ -49,11 +49,11 @@
           <h1 class="heading"></h1>
           <div class="btns"></div>
         </div>
-        <div class="paragraph paragraph-7 paragraph-8">
-          <p>Score: 0</p>
+       <div class="paragraph paragraph-7 paragraph-8">
+          <p>Score: <?php echo $score;?></p>
         </div>
         <div class="paragraph paragraph-7 paragraph-9">
-          <p>Lives: 3</p>
+          <p>Lives: <?php echo $lives;?></p>
         </div>
         <div class="hero-unit hero-unit-2">
           <?php $rand = array_rand($mathematics); ?>

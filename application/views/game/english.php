@@ -50,10 +50,10 @@
           <div class="btns"></div>
         </div>
         <div class="paragraph paragraph-7 paragraph-8">
-          <p>Score: 0</p>
+          <p>Score: <?php echo $score;?></p>
         </div>
         <div class="paragraph paragraph-7 paragraph-9">
-          <p>Lives: 3</p>
+          <p>Lives: <?php echo $lives;?></p>
         </div>
         <?php $rand = array_rand($english); ?>
         <div class="hero-unit hero-unit-2">
