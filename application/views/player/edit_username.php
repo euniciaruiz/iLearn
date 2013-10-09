@@ -5,7 +5,6 @@
   $is_logged_in = $this->session->userdata('is_logged_in');
 ?>
 <html lang="en">
-  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,14 +13,9 @@
     <link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/project.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/editUsername.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
     <title>Copy of questions</title>
   </head>
-  
   <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
@@ -29,11 +23,11 @@
           <div class="rectangle rectangle-5">
             <?php echo form_open('playerController/updateUsername'); ?>
             <div class="paragraph paragraph-1">
-              <p><?php $query[0]->id; ?></p>
+              <p><?php echo form_error('username');?></p>
             </div>
-            <input type="hidden" name="id" value="<?php echo $query[0]; ?>">
-            <input type="hidden" name="password" value="<?php echo $query[2]; ?>">
-            <input class="textinput" type="text" name="username" value="<?php $query[1]; ?>">
+            <input type="hidden" name="id" value="<?php echo $query[0]['id']; ?>">
+            <input type="hidden" name="password" value="<?php echo $query[0]['password']; ?>">
+            <input class="textinput" type="text" name="username" value="<?php echo $query[0]['username']; ?>">
             <div class="paragraph paragraph-2">
               <p>Username</p>
             </div>

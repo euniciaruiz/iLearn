@@ -30,4 +30,14 @@ class Player extends CI_Model {
 			return true;
 		}
 	}
+
+	function updatePlayer($data) {
+		$this->db->where('id', $data['id']);
+		$this->db->update('division', $data);
+	}
+
+	function deletePlayer($id) {
+		$this->db->where('id', $id);
+		$this->db->delete('player');
+	}
 }

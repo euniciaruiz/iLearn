@@ -94,20 +94,28 @@ class PlayerController extends CI_Controller {
 	public function editUsername() {
 		$this->is_logged_in();
 		$username = $this->session->userdata('username');
-		$data['query'] = $this->player->getPlayerData($username);
+		$data['query']= $this->player->getPlayerData($username);
 		$this->load->view('player/edit_username', $data);
 	}
 
 	public function updateUsername()
 	{
-		$data = array(
-			'id' => $this->input->post('id'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
-		);
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[player.username]|xss_clean');
 
-		$this->player->updatePlayer($data);
-		$this->index();
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->editUsername();
+		}
+		else {
+			$data = array(
+				'id' => $this->input->post('id'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),
+			);
+
+			$this->player->updatePlayer($data);
+			$this->player_profile();
+		}
 	}
 
 	public function editPassword() {
@@ -119,24 +127,33 @@ class PlayerController extends CI_Controller {
 
 	public function updatePassword()
 	{
-		$data = array(
-			'id' => $this->input->post('id'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
-		);
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
 
-		$this->player->updatePlayer($data);
-		$this->index();
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->editPassword();
+		}
+		else {
+			$data = array(
+				'id' => $this->input->post('id'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),
+			);
+
+			$this->player->updatePlayer($data);
+			$this->player_profile();
+		}
 	}
 
 	public function deleteAccount() {
-		//$this->is_logged_in();
+		$this->is_logged_in();
 		$this->load->view('player/delete_account');
 	}
 
-	public function chart() {
-		$this->is_logged_in();
-		$this->load->view('game/chart');
+	public function deletePlayer() {
+		$this->player->deletePlayer($this->input->post('id'));
+		$this->player_profile();
 	}
 
 	public function game_statistics($date) {

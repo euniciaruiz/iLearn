@@ -5,7 +5,6 @@
   $is_logged_in = $this->session->userdata('is_logged_in');
 ?>
 <html lang="en">
-  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,39 +13,33 @@
     <link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/project.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/editPassword.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
     <title>Copy of questions</title>
   </head>
-  
   <body>
     <div id="page-wrapper">
       <div id="absolute-wrapper">
         <div class="rectangle rectangle-1 rectangle-2 rectangle-4">
           <div class="rectangle rectangle-5">
-            <?php echo form_open('playerController/updatePassword');
-              foreach($query->result() as $player)
-              {
-                  echo '<tr><td><input type="hidden" name="id" value="'.$player->id.'"></td></tr>'; ?>
+            <?php echo form_open('playerController/updatePassword'); ?>
             <div class="paragraph paragraph-1 paragraph-2 paragraph-3">
-              <p>Password</p>
+              <p><?php echo form_error('password');?></p>
             </div>
-            <input class="textinput textinput-1" type="text" name="password">
+            <input type="hidden" name="id" value="<?php echo $query[0]['id']; ?>">
+            <input type="hidden" name="password" value="<?php echo $query[0]['username']; ?>">
+            <input class="textinput textinput-1" type="text" name="password" value="<?php echo $query[0]['password']; ?>">
             <div class="paragraph paragraph-1 paragraph-4">
               <p>Password</p>
             </div>
             <div class="paragraph paragraph-1 paragraph-2 paragraph-5">
-              <p>Password</p>
+              <p><?php echo form_error('passconf');?></p>
             </div>
             <input class="textinput textinput-2" type="text" name="passconf">
             <div class="paragraph paragraph-6">
               <p>Confirm Password</p>
             </div>
             <button class="btn btn-1">Edit</button>
-            <?php echo form_close(); }?>
+            <?php echo form_close(); ?>
             <?php echo form_open('playerController/player_profile'); ?>
             <button class="btn btn-2">Cancel</button>
             <?php echo form_close(); ?>
