@@ -155,6 +155,7 @@ class SubjectController extends CI_Controller {
 		else {
 			$player = $this->player->getPlayerData($this->session->userdata('username'));
 		};
+
  		$data = array(
 				'question_limit' => $this->input->post('questionlimit'),
 				'lives' => $this->input->post('livestemp'),
@@ -162,7 +163,7 @@ class SubjectController extends CI_Controller {
 				'subject_name' => $this->input->post('subject_name'),
 				'subject_array' => $this->input->post('subject')
  		);
- 
+
  		if($data['subject_name'] == "general_knowledge") {
  			$subject_id = 0;
 			$data['question_limit'] = unserialize($data['question_limit']);
@@ -172,7 +173,7 @@ class SubjectController extends CI_Controller {
 					$data = array(
 						'player_id' => $player[0]['id'],
 						'score' => unserialize($data['score']),
-						'subject'=> "General knowledge",
+						'subject_id'=> $this->subject->getSubjectId("general knowledge"),
 						'date' => date('Y-m-d')
 					);
 					$this->playerStatistics->createPlayerStatistics($data);
@@ -192,7 +193,7 @@ class SubjectController extends CI_Controller {
 						$data = array(
 							'player_id' => $player[0]['id'],
 							'score' => $data['score'],
-							'subject'=> "General knowledge",
+							'subject_id'=> $this->subject->getSubjectId("general knowledge"),
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
@@ -210,7 +211,7 @@ class SubjectController extends CI_Controller {
 					$data = array(
 						'player_id' => $player[0]['id'],
 						'score' => unserialize($data['score']),
-						'subject'=> "Mathematics",
+						'subject_id'=> $this->subject->getSubjectId("mathematics"),
 						'date' => date('Y-m-d')
 					);
 					$this->playerStatistics->createPlayerStatistics($data);
@@ -228,8 +229,8 @@ class SubjectController extends CI_Controller {
 					if($player != null) {
 						$data = array(
 							'player_id' => $player[0]['id'],
-							'score' => unserialize($data['score']),
-							'subject'=> "Mathematics",
+							'score' => $data['score'],
+							'subject_id'=> $this->subject->getSubjectId("mathematics"),
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
@@ -246,7 +247,7 @@ class SubjectController extends CI_Controller {
 						$data = array(
 							'player_id' => $player[0]['id'],
 							'score' => unserialize($data['score']),
-							'subject'=> "Science",
+							'subject_id'=> $this->subject->getSubjectId("science"),
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
@@ -264,8 +265,8 @@ class SubjectController extends CI_Controller {
 						if($player != null) {
 							$data = array(
 								'player_id' => $player[0]['id'],
-								'score' => unserialize($data['score']),
-								'subject'=> "Science",
+								'score' => $data['score'],
+								'subject_id'=> $this->subject->getSubjectId("science"),
 								'date' => date('Y-m-d')
 							);
 							$this->playerStatistics->createPlayerStatistics($data);
@@ -282,7 +283,7 @@ class SubjectController extends CI_Controller {
 						$data = array(
 							'player_id' => $player[0]['id'],
 							'score' => unserialize($data['score']),
-							'subject'=> "English",
+							'subject_id'=> $this->subject->getSubjectId("english"),
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
@@ -299,8 +300,8 @@ class SubjectController extends CI_Controller {
 						if($player != null) {
 							$data = array(
 								'player_id' => $player[0]['id'],
-								'score' => unserialize($data['score']),
-								'subject'=> "English",
+								'score' => $data['score'],
+								'subject_id'=> $this->subject->getSubjectId("english"),
 								'date' => date('Y-m-d')
 							);
 							$this->playerStatistics->createPlayerStatistics($data);

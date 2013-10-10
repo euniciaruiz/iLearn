@@ -168,11 +168,16 @@ class PlayerController extends CI_Controller {
  		$this->load->model('playerStatistics');
 		$query = $this->playerStatistics->getGameStatistics($player[0]['id'], $date);
 
-		foreach ($query as $key) {
-
+		/*foreach ($query as $key) {
 			$FC->addChartData($key['score'], "name=".$key['subject']);
-		}
-	
+		};*/
+
+		$this->load->model('subject');
+		foreach ($query as $key) {
+			$subject = $this->subject->getSubjectName($key['subject_id']);
+			$FC->addChartData($key['score'], "name=".$subject);
+		};
+
 		print $FC->getXML();
 	}
 }
