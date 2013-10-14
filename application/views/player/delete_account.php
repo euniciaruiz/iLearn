@@ -5,6 +5,7 @@
   $is_logged_in = $this->session->userdata('is_logged_in');
 ?>
 <html lang="en">
+  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +14,11 @@
     <link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url();?>css/project.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/deleteAccount.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css" />
+    <script src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
+    <script src="<?php echo base_url();?>js/jquery-ui.js"></script>
     <title>Copy of questions</title>
   </head>
   <body>
@@ -24,9 +29,7 @@
             <div class="paragraph">
               <p>Click the delete button if you want your account here in iLearn to be deleted. If you do, future attempt on accessing the deleted&nbsp;account will be impossible.</p>
             </div>
-            <?php echo form_open('playerController/deletePlayer'); ?>
-            <button class="btn btn-1">Delete</button>
-            <?php echo form_close(); ?>
+            <button class="btn btn-1" id="delete">Delete</button>
             <?php echo form_open('playerController/player_profile'); ?>
             <button class="btn btn-2">Cancel</button>
             <?php echo form_close(); ?>
@@ -51,7 +54,7 @@
                       <?php echo anchor('mainmenuController', "Home"); ?>
                     </li>
                     <li>
-                      <?php echo anchor('playerController/player_profile', $username."'s Profile"); ?>
+                      <?php echo anchor('playerController/player_profile', 'Profile'); ?>
                     </li>
                     <li>
                       <?php echo anchor('playerController/logout', 'Logout'); ?>
@@ -71,6 +74,40 @@
           </div>
         </div>
       </div>
+    </div>
+    <script>
+      $( document ).ready(function() {
+        $( "#delete" ).click(function(event) {
+          $( "#dialog-confirm" ).dialog( "open" );
+        });
+
+        $( "#dialog-confirm" ).dialog({
+          autoOpen: false,
+          //resizable: true,
+          height:150,
+          width:400,
+          modal: true,
+          show: {
+            effect: "blind",
+            duration: 1000
+          },
+          hide: {
+            effect: "explode",
+            duration: 1000
+          },
+          buttons: {
+            "Delete Account": function() {
+              location.href='<?php echo base_url() ?>index.php/playerController/deletePlayer/<?php echo $query[0]['id']; ?>';
+            },
+            Cancel: function() {
+              $( this ).dialog( "close" );
+            }
+          }
+        });   
+      });
+    </script>
+    <div id="dialog-confirm" title="Delete Confirmation">
+      <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Are you sure?</p>
     </div>
   </body>
 

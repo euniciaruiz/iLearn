@@ -25,12 +25,10 @@
                 <tr>
                   <td class="td-1 td-2 td-3">Username:</td>
                   <td class="td-2"><?php echo $query[0]['username']; ?></td>
-                  <td class="td-2 td-3"><?php echo anchor('playerController/editUsername', 'Edit'); ?></td>
                 </tr>
                 <tr>
                   <td class="td-1 td-3 td-4">Password:</td>
                   <td class="td-4"><?php echo $query[0]['password']; ?></td>
-                  <td class="td-3 td-4"><?php echo anchor('playerController/editPassword', 'Edit'); ?></td>
                 </tr>
               </tbody>
             </table>

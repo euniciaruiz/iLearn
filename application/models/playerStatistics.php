@@ -9,7 +9,7 @@ class PlayerStatistics extends CI_Model {
 	}
 
 	function createPlayerStatistics($data) {
-		$this->db->where('subject', $data['subject']);
+		$this->db->where('subject_id', $data['subject_id']);
 		$this->db->where('date', $data['date']);
 		$query = $this->db->get('player_statistics');
 
@@ -25,5 +25,10 @@ class PlayerStatistics extends CI_Model {
 		};
 		
 		return;
+	}
+
+	function deletePlayerStatistics($playerId) {
+		$this->db->where('player_id', $playerId);
+		$this->db->delete('player_statistics');
 	}
 }

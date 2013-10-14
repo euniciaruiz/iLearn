@@ -9,12 +9,14 @@ class Subject extends CI_Model {
 	function getSubjectId($subjectName) {
 		$this->db->where('subject_name', $subjectName);
 		$result = $this->db->get('subject');
-		return $result;
+		$row = $result->row();
+		return $row->id;
 	}
 
-	function getSubject($id) {
+	function getSubjectName($id) {
 		$this->db->where('id', $id);
 		$result = $this->db->get('subject');
-		return $result->result_array();
+		$row = $result->row();
+		return $row->subject_name;
 	}
 }

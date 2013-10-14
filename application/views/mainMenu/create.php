@@ -10,11 +10,7 @@
     <link href="<?php echo base_url();?>css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>css/project.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>css/signup.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
     <title>Sign-up</title>
   </head>
   
@@ -34,14 +30,14 @@
             <div class="paragraph paragraph-1 paragraph-5">
               <p><?php echo form_error('password');?></p>
             </div>
-            <input class="textinput textinput-2" type="text" name="password" value="<?php echo set_value('password'); ?>">
+            <input class="textinput textinput-2" type="password" name="password" value="<?php echo set_value('password'); ?>">
             <div class="paragraph paragraph-2 paragraph-6">
               <p>Password</p>
             </div>
             <div class="paragraph paragraph-1 paragraph-7">
               <p><?php echo form_error('passconf');?></p>
             </div>
-            <input class="textinput textinput-3" type="text" name="passconf" value="<?php echo set_value('passconf'); ?>">
+            <input class="textinput textinput-3" type="password" name="passconf" value="<?php echo set_value('passconf'); ?>">
             <div class="paragraph paragraph-2 paragraph-8">
               <p>Confirm Password</p>
             </div>

@@ -6,7 +6,7 @@
 ?>
 <html>
   <head>
-    <title>Dynamic Graphs with JQuery and FusionCharts</title>
+    <title>Game Statistics</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald:400,300,700" media="screen" rel="stylesheet" type="text/css" />
@@ -22,21 +22,21 @@
     <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
     <script language="JavaScript">
       function drawChart(chartSWF, strXML, chartdiv) {
-      	//Create another instance of the chart.
-      	var chart = new FusionCharts(chartSWF, "chart1Id", "400", "300", "0", "0"); 
-      	chart.setDataXML(strXML);
-      	chart.render(chartdiv);
+        //Create another instance of the chart.
+        var chart = new FusionCharts(chartSWF, "chart1Id", "600", "400", "0", "0"); 
+        chart.setDataXML(strXML);
+        chart.render(chartdiv);
       }
       function updateChart() {
-      	$.get('/ilearn/index.php/playerController/game_statistics/'+$('#date').val(), function(data) {
-      		drawChart("<?php echo base_url();?>Charts/FCF_Column3D.swf", data,"chart1div");
-      	});
+        $.get('/ilearn/index.php/playerController/game_statistics/'+$('#date').val(), function(data) {
+          drawChart("<?php echo base_url();?>Charts/FCF_Column3D.swf", data,"chart1div");
+        });
       }
       $(document).ready(function(){
-       	$('#date').datepicker({ dateFormat: 'yy-mm-dd' }).val();
-       	$("#changeDate").click(function( event ) {
-      		  updateChart();
-      	});
+        $('#date').datepicker({ dateFormat: 'yy-mm-dd' }).val();
+        $("#changeDate").click(function( event ) {
+            updateChart();
+        });
       });
     </script>
   </head>
@@ -74,7 +74,7 @@
                       <?php echo anchor('mainmenuController', 'Home'); ?>
                     </li>
                     <li>
-                      <?php echo anchor('playerController/player_profile', $username."'s Profile"); ?>
+                      <?php echo anchor('playerController/player_profile', 'Profile'); ?>
                     </li>
                     <li>
                       <?php echo anchor('playerController/logout', 'Logout'); ?>

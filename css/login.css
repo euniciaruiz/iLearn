@@ -68,13 +68,15 @@
    left: 218px;
  }
  #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-2 {
-   top: 124px;
+   /*top: 124px;*/
+   width: 322px;
+   top: 122px;
  }
  #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 .paragraph.paragraph-1.paragraph-2 p {
    font-family:"federo";
    color: #000000;
    line-height: 29px;
-   font-size: 12pt;
+   font-size: 10pt;
  }
  #absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-4 .rectangle.rectangle-5 input.textinput {
    width: 317.79861068725586px;

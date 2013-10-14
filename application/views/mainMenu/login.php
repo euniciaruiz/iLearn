@@ -19,15 +19,15 @@
           <div class="rectangle rectangle-5">
             <?php echo form_open('playerController/validate_credentials');?>
             <div class="paragraph paragraph-1 paragraph-2">
-              <?php if($this->session->flashdata('msg')){ ?>
-              <p><?php echo $this->session->flashdata('msg'); ?></p>
+              <?php if ($this->session->flashdata('flashError')) { ?>
+              <p><?php echo $this->session->flashdata('flashError'); ?></p>
               <?php } ?>
             </div>
             <input class="textinput textinput-1" type="text" name="username">
             <div class="paragraph paragraph-3">
               <p>Username</p>
             </div>
-            <input class="textinput textinput-2" type="text" name="password">
+            <input class="textinput textinput-2" type="password" name="password">
             <div class="paragraph paragraph-5">
               <p>Password</p>
             </div>

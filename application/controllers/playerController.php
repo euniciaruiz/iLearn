@@ -29,9 +29,9 @@ class PlayerController extends CI_Controller {
 	
 	public function create()
 	{
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[player.username]|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[passconf]');
-		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[12]|is_unique[player.username]|xss_clean');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required|matches[password]');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->signup();
@@ -42,7 +42,8 @@ class PlayerController extends CI_Controller {
 				'password' => md5($this->input->post('password'))
 			);
 			$this->player->addPlayer($data);
-			$this->load->view('mainMenu/login');
+			redirect('playerController/login');
+			//$this->load->view('mainMenu/login');
 		}
 	}
 	
@@ -66,8 +67,8 @@ class PlayerController extends CI_Controller {
 			redirect('mainMenuController');
 		}
 		else {
-			$this->session->set_flashdata('msg', 'Incorrect Username/Password Combination');
-			$this->login();
+			$this->session->set_flashdata('flashError', 'Incorrect Username/Password Combination');
+			redirect('playerController/login');
 		}
 	}
 
@@ -148,12 +149,21 @@ class PlayerController extends CI_Controller {
 
 	public function deleteAccount() {
 		$this->is_logged_in();
-		$this->load->view('player/delete_account');
+		$username = $this->session->userdata('username');
+		$data['query'] = $this->player->getPlayerData($username);
+		$this->load->view('player/delete_account', $data);
 	}
 
-	public function deletePlayer() {
-		$this->player->deletePlayer($this->input->post('id'));
-		$this->player_profile();
+	public function deletePlayer($playerId) {
+		$this->load->model('playerStatistics');
+		$this->playerStatistics->deletePlayerStatistics($playerId);
+		$this->player->deletePlayer($playerId);
+		$this->logout();
+	}
+
+	public function chart() {
+		$this->is_logged_in();
+		$this->load->view('game/chart');
 	}
 
 	public function game_statistics($date) {
@@ -167,10 +177,6 @@ class PlayerController extends CI_Controller {
 	
  		$this->load->model('playerStatistics');
 		$query = $this->playerStatistics->getGameStatistics($player[0]['id'], $date);
-
-		/*foreach ($query as $key) {
-			$FC->addChartData($key['score'], "name=".$key['subject']);
-		};*/
 
 		$this->load->model('subject');
 		foreach ($query as $key) {

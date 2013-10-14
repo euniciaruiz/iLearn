@@ -13,7 +13,6 @@
 	    	<link href="<?php echo base_url();?>css/common.css" media="screen" rel="stylesheet" type="text/css" />
 	    	<link href="<?php echo base_url();?>css/fontawesome.css" media="screen" rel="stylesheet" type="text/css" />
 			<link href="<?php echo base_url();?>css/mainmenu.css" media="screen" rel="stylesheet" type="text/css" />
-	    	
 </head>
   <body>
     <div id="page-wrapper">
@@ -35,7 +34,7 @@
                       <?php echo anchor('mainmenuController', "Home"); ?>
                     </li>
                     <li>
-                       <?php echo anchor('playerController/player_profile', $username."'s Profile"); ?>
+                       <?php echo anchor('playerController/player_profile', 'Profile'); ?>
                     </li>
                     <li>
                       <?php echo anchor('playerController/logout', 'Logout'); ?>
