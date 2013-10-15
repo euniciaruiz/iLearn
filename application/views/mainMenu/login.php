@@ -31,7 +31,7 @@
             <div class="paragraph paragraph-5">
               <p>Password</p>
             </div>
-            <button class="btn btn-1">Signup</button>
+            <button class="btn btn-1">Login</button>
             <?php echo form_close(); ?>
             <?php echo form_open('mainmenuController');?>
             <button class="btn btn-2">Cancel</button>

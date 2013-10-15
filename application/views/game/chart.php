@@ -21,6 +21,19 @@
     <script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
     <script language="JavaScript">
+	function displaydate() {
+		var today = new Date()
+		var month = today.getMonth() + 1
+		var day = today.getDate()
+		var year = today.getFullYear()
+		var s = "-"
+
+		if(month > 0 && month < 10) { month = "0" + month; }
+		if(day > 0 && day < 10) { day = "0" + day; }
+
+		document.form1.datetext.value = year + s + month + s + day
+		}
+	
       function drawChart(chartSWF, strXML, chartdiv) {
         //Create another instance of the chart.
         var chart = new FusionCharts(chartSWF, "chart1Id", "600", "400", "0", "0"); 
@@ -40,7 +53,7 @@
       });
     </script>
   </head>
- <body>
+ <body onLoad="javascript:displaydate()">
     <div id="page-wrapper">
       <div id="absolute-wrapper">
         <div class="rectangle rectangle-1 rectangle-2 rectangle-4">
@@ -48,7 +61,9 @@
             <div class="paragraph">
               <p>Choose a&nbsp;date to view your game statistics.</p>
             </div>
-            <input class="textinput" type="text" id="date" name="date" placeholder="Choose Date">
+			<form name="form1">
+            <input class="textinput" type="text" id="date" name="datetext">
+			</form>
             <button class="btn btn-primary" id="changeDate" name="changeDate">View Chart</button>
           </div>
           <div class="rectangle rectangle-6">
