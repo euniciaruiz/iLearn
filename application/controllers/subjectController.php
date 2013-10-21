@@ -165,7 +165,6 @@ class SubjectController extends CI_Controller {
  		);
 
  		if($data['subject_name'] == "general_knowledge") {
- 			$subject_id = 0;
 			$data['question_limit'] = unserialize($data['question_limit']);
 
 			if($data['question_limit'] == 5){
@@ -177,6 +176,22 @@ class SubjectController extends CI_Controller {
 						'date' => date('Y-m-d')
 					);
 					$this->playerStatistics->createPlayerStatistics($data);
+
+					$subjectList = $this->subject->getSubjectList();
+					foreach ($subjectList->result_array() as $subject){
+						if($subject['subject_name'] != "general knowledge") {
+							$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+							if (!$result) {
+								$data = array(
+									'player_id' => $player[0]['id'],
+									'score' => 0,
+									'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+									'date' => date('Y-m-d')
+								);
+								$this->playerStatistics->createPlayerStatistics($data);
+							}
+						}
+					}
 				}
 
  				$this->load->view('game/limit_page');
@@ -197,6 +212,22 @@ class SubjectController extends CI_Controller {
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
+
+						$subjectList = $this->subject->getSubjectList();
+						foreach ($subjectList->result_array() as $subject){
+							if($subject['subject_name'] != "general knowledge") {
+								$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+								if (!$result) {
+									$data = array(
+										'player_id' => $player[0]['id'],
+										'score' => 0,
+										'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+										'date' => date('Y-m-d')
+									);
+									$this->playerStatistics->createPlayerStatistics($data);
+								}
+							}
+						}
 					}
 
 					$this->load->view('mainmenu/game_over');
@@ -215,6 +246,22 @@ class SubjectController extends CI_Controller {
 						'date' => date('Y-m-d')
 					);
 					$this->playerStatistics->createPlayerStatistics($data);
+
+					$subjectList = $this->subject->getSubjectList();
+					foreach ($subjectList->result_array() as $subject){
+						if($subject['subject_name'] != "mathematics") {
+							$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+							if (!$result) {
+								$data = array(
+									'player_id' => $player[0]['id'],
+									'score' => 0,
+									'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+									'date' => date('Y-m-d')
+								);
+								$this->playerStatistics->createPlayerStatistics($data);
+							}
+						}
+					}
 				}
 
  				$this->load->view('game/limit_page');
@@ -234,6 +281,22 @@ class SubjectController extends CI_Controller {
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
+
+						$subjectList = $this->subject->getSubjectList();
+						foreach ($subjectList->result_array() as $subject){
+							if($subject['subject_name'] != "mathematics") {
+								$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+								if (!$result) {
+									$data = array(
+										'player_id' => $player[0]['id'],
+										'score' => 0,
+										'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+										'date' => date('Y-m-d')
+									);
+									$this->playerStatistics->createPlayerStatistics($data);
+								}
+							}
+						}
 					}
 
 					$this->load->view('mainmenu/game_over');
@@ -251,6 +314,22 @@ class SubjectController extends CI_Controller {
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
+
+						$subjectList = $this->subject->getSubjectList();
+						foreach ($subjectList->result_array() as $subject){
+							if($subject['subject_name'] != "science") {
+								$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+								if (!$result) {
+									$data = array(
+										'player_id' => $player[0]['id'],
+										'score' => 0,
+										'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+										'date' => date('Y-m-d')
+									);
+									$this->playerStatistics->createPlayerStatistics($data);
+								}
+							}
+						}
 					}
 
  					$this->load->view('game/limit_page');
@@ -270,6 +349,22 @@ class SubjectController extends CI_Controller {
 								'date' => date('Y-m-d')
 							);
 							$this->playerStatistics->createPlayerStatistics($data);
+
+							$subjectList = $this->subject->getSubjectList();
+							foreach ($subjectList->result_array() as $subject){
+								if($subject['subject_name'] != "science") {
+									$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+									if (!$result) {
+										$data = array(
+											'player_id' => $player[0]['id'],
+											'score' => 0,
+											'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+											'date' => date('Y-m-d')
+										);
+										$this->playerStatistics->createPlayerStatistics($data);
+									}
+								}
+							}
 						}
 
 						$this->load->view('mainmenu/game_over');
@@ -287,6 +382,22 @@ class SubjectController extends CI_Controller {
 							'date' => date('Y-m-d')
 						);
 						$this->playerStatistics->createPlayerStatistics($data);
+
+						$subjectList = $this->subject->getSubjectList();
+						foreach ($subjectList->result_array() as $subject){
+							if($subject['subject_name'] != "english") {
+								$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+								if (!$result) {
+									$data = array(
+										'player_id' => $player[0]['id'],
+										'score' => 0,
+										'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+										'date' => date('Y-m-d')
+									);
+									$this->playerStatistics->createPlayerStatistics($data);
+								}
+							}
+						}
 					}
  					$this->load->view('game/limit_page');
  				}
@@ -305,6 +416,22 @@ class SubjectController extends CI_Controller {
 								'date' => date('Y-m-d')
 							);
 							$this->playerStatistics->createPlayerStatistics($data);
+
+							$subjectList = $this->subject->getSubjectList();
+							foreach ($subjectList->result_array() as $subject){
+								if($subject['subject_name'] != "english") {
+									$result = $this->playerStatistics->getGameStatisticForSubject($subject['id'], date('Y-m-d'));
+									if (!$result) {
+										$data = array(
+											'player_id' => $player[0]['id'],
+											'score' => 0,
+											'subject_id'=> $this->subject->getSubjectId($subject['subject_name']),
+											'date' => date('Y-m-d')
+										);
+										$this->playerStatistics->createPlayerStatistics($data);
+									}
+								}
+							}
 						}
 
 						$this->load->view('mainmenu/game_over');

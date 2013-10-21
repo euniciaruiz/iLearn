@@ -163,12 +163,16 @@ class PlayerController extends CI_Controller {
 
 	public function chart() {
 		$this->is_logged_in();
-		$this->load->view('game/chart');
+		$data['currentDate'] = date('Y-m-d');
+		$this->load->view('game/chart', $data);
 	}
 
-	public function game_statistics($date) {
+	public function gameStatisticsDay() {
 		$this->is_logged_in();
-		$FC = new FusionCharts();
+		$FC = new FusionCharts("Column3D", "600", "430");
+		$FC->setSWFPath(base_url().'Charts/');
+
+		$date = $this->input->post('date');
 
 		$strParam="caption=Game Statistics;subcaption=[".$date."];xAxisName=Subject;yAxisName=Score;decimalPrecision=0";
 		$FC->setChartParams($strParam);
@@ -184,7 +188,68 @@ class PlayerController extends CI_Controller {
 			$FC->addChartData($key['score'], "name=".$subject);
 		};
 
-		print $FC->getXML();
+		$data['chart'] = $FC;
+        $data['currentDate'] = date('Y-m-d');
+		$this->load->view('game/chart1', $data);
+	}
+
+	public function gameStatisticsMonth() {
+		$this->is_logged_in();
+        $FC = new FusionCharts("MSLine","700","400");
+        $FC->setSWFPath(base_url().'Charts/');
+        
+        $month = $this->input->post('month');
+        $year = $this->input->post('year');
+
+        $strParam="caption=Game Statistics;subcaption=[".$month.", ".$year."];xAxisName=Days;yAxisName=Score;decimalPrecision=0;showvalues=0;numvdivlines=10;drawanchors=0;divlinealpha=30;alternatehgridalpha=20;setadaptiveymin=1;canvaspadding=10;labelDisplay=ROTATE;palette=2";
+        $FC->setChartParams($strParam);
+        
+        $player = $this->player->getPlayerData($this->session->userdata('username'));
+
+        $this->load->model('playerStatistics');
+        $date = $this->playerStatistics->getAllDates($month, $year);
+
+        foreach ($date->result_array() as $key) {
+            $FC->addCategory($key['date']);
+        }
+
+        $this->load->model('subject');
+        $subject = $this->subject->getSubjectList();
+
+        foreach ($subject->result_array() as $key) {
+            if ($key['subject_name'] == "general knowledge") {
+                $FC->addDataset("General Knowledge");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject($player[0]['id'], $key['id'], $month, $year);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "mathematics") {
+                $FC->addDataset("Mathematics");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject($player[0]['id'], $key['id'], $month, $year);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "science") {
+                $FC->addDataset("Science");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject($player[0]['id'], $key['id'], $month, $year);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "english") {
+                $FC->addDataset("English");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject($player[0]['id'], $key['id'], $month, $year);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+        }
+
+		$data['chart'] = $FC;
+        $data['currentDate'] = date('Y-m-d');
+		$this->load->view('game/chart1', $data);
 	}
 }
 ?>
