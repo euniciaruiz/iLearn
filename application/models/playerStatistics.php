@@ -12,6 +12,11 @@ class PlayerStatistics extends CI_Model {
 		$result = $this->db->query("SELECT DISTINCT date from player_statistics where EXTRACT(MONTH FROM date) = $month and EXTRACT(YEAR FROM date) = $year order by date asc");
 		return $result;
 	}
+	
+	function getDateRange($fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay) {
+		$result = $this->db->query("SELECT DISTINCT date from player_statistics WHERE EXTRACT(YEAR FROM date) BETWEEN $fromYear and $toYear and EXTRACT(MONTH FROM date) BETWEEN $fromMonth and $toMonth and EXTRACT(DAY FROM date) BETWEEN $fromDay and $toDay order by date asc");
+		return $result;
+	}
 
 	function getGameStatisticForSubject($subjectId, $date) {
 		$this->db->where('subject_id', $subjectId);
@@ -50,6 +55,11 @@ class PlayerStatistics extends CI_Model {
 
 	function getGameStatisticsBySubject($playerId, $subjectId, $month, $year) {
 		$result = $this->db->query("SELECT score from player_statistics where EXTRACT(MONTH FROM date) = $month and EXTRACT(YEAR FROM date) = $year and subject_id = $subjectId and player_id = $playerId order by date asc");
+		return $result;
+	}
+	
+	function getGameStatisticsBySubject1($playerId, $subjectId, $fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay) {
+		$result = $this->db->query("SELECT score from player_statistics WHERE EXTRACT(YEAR FROM date) BETWEEN $fromYear and $toYear and EXTRACT(MONTH FROM date) BETWEEN $fromMonth and $toMonth and EXTRACT(DAY FROM date) BETWEEN $fromDay and $toDay and subject_id = $subjectId and player_id = $playerId order by date asc");
 		return $result;
 	}
 }

@@ -251,5 +251,72 @@ class PlayerController extends CI_Controller {
         $data['currentDate'] = date('Y-m-d');
 		$this->load->view('game/chart1', $data);
 	}
+	
+	public function gameStatisticsRange() {
+		$this->is_logged_in();
+		$FC = new FusionCharts("MSLine","700","400");
+		$FC->setSWFPath(base_url().'Charts/');
+
+		$fromDate = $this->input->post('from');
+        $toDate = $this->input->post('to');
+
+		$strParam="caption=Game Statistics;subcaption=[".$fromDate."- ".$toDate."];xAxisName=Days;yAxisName=Score;decimalPrecision=0;showvalues=0;numvdivlines=10;drawanchors=0;divlinealpha=30;alternatehgridalpha=20;setadaptiveymin=1;canvaspadding=10;labelDisplay=ROTATE;palette=2";
+        $FC->setChartParams($strParam);
+        
+        $player = $this->player->getPlayerData($this->session->userdata('username'));
+        
+        $fromTemp = new DateTime($fromDate);
+        $toTemp = new DateTime($toDate);
+        $fromYear = $fromTemp->format('Y');
+        $fromMonth = $fromTemp->format('m');
+        $fromDay = $fromTemp->format('d');
+        $toYear = $toTemp->format('Y');
+        $toMonth = $toTemp->format('m');
+        $toDay = $toTemp->format('d');
+ 
+        $this->load->model('playerStatistics');
+        $date = $this->playerStatistics->getDateRange($fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay);
+        
+		foreach ($date->result_array() as $key) {
+            $FC->addCategory($key['date']);
+        }
+
+        $this->load->model('subject');
+        $subject = $this->subject->getSubjectList();
+
+        foreach ($subject->result_array() as $key) {
+            if ($key['subject_name'] == "general knowledge") {
+                $FC->addDataset("General Knowledge");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject1($player[0]['id'], $key['id'], $fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "mathematics") {
+                $FC->addDataset("Mathematics");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject1($player[0]['id'], $key['id'], $fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "science") {
+                $FC->addDataset("Science");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject1($player[0]['id'], $key['id'], $fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+            else if ($key['subject_name'] == "english") {
+                $FC->addDataset("English");
+                $gameStatistics = $this->playerStatistics->getGameStatisticsBySubject1($player[0]['id'], $key['id'], $fromYear, $fromMonth, $fromDay, $toYear, $toMonth, $toDay);
+                foreach ($gameStatistics->result_array() as $value) {
+                    $FC->addChartData($value['score']);
+                }
+            }
+        }
+		$data['chart'] = $FC;
+        $data['currentDate'] = date('Y-m-d');
+		$this->load->view('game/chart1', $data);
+	}
 }
 ?>
